@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S5",
+  "name": "Trap Case: Cheapest Option is Non-Viable",
+  "description": "Cheapest alternative supplier SUP-009 quotes low price but arrives in 14 days, which is long after stock runs out on day 4. Next supplier SUP-004 costs slightly more but arrives on day 5 and is viable.",
+  "report_text": "SUPPLIER DISRUPTION: Primary vendor Apex Micro Systems reports machinery breakdown delaying SKU-1042 for Chennai Plant (SITE-CHN-01) by 14 days. On-hand cover is 4 days. Need 1200 units. Severity: 4.",
+  "expected_action": "REORDER",
+  "expected_chosen_option_keyword": "SUP-004",
+  "expected_parties_to_notify": ["Procurement Manager", "Plant Manager", "Supplier Account Rep"],
+  "test_purpose": "Viability filter strictly beats raw cost: cheaper option arrives too late and must be rejected."
+}

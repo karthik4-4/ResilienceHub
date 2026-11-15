@@ -1,0 +1,34 @@
+contact_id,name,role,site_id,email,phone,slack_handle
+CON-001,Rajesh Kannan,Procurement Manager,SITE-CHN-01,rajesh.kannan@resiliencehub.corp,+91-98401-22001,@rajesh_proc
+CON-002,Sunita Menon,Plant Manager,SITE-CHN-01,sunita.menon@resiliencehub.corp,+91-98401-22002,@sunita_chn
+CON-003,Arun Kumar,Logistics Manager,SITE-CHN-01,arun.kumar@resiliencehub.corp,+91-98401-22003,@arun_logistics
+CON-004,Venkatesh Iyer,Supply Chain Planner,SITE-CHN-01,venkatesh.iyer@resiliencehub.corp,+91-98401-22004,@venkat_scp
+CON-005,Ananya Sharma,Finance Controller,SITE-CHN-01,ananya.sharma@resiliencehub.corp,+91-98401-22005,@ananya_fin
+CON-006,Suresh Reddy,Procurement Manager,SITE-BLR-02,suresh.reddy@resiliencehub.corp,+91-98450-33001,@suresh_blr
+CON-007,Priya Nambiar,Plant Manager,SITE-BLR-02,priya.nambiar@resiliencehub.corp,+91-98450-33002,@priya_blr
+CON-008,Karthik Raghavan,Logistics Manager,SITE-BLR-02,karthik.r@resiliencehub.corp,+91-98450-33003,@karthik_log
+CON-009,Meera Joshi,Supply Chain Planner,SITE-BLR-02,meera.joshi@resiliencehub.corp,+91-98450-33004,@meera_plan
+CON-010,Amitabh Ghosh,Site Manager,SITE-PUN-03,amitabh.ghosh@resiliencehub.corp,+91-98220-44001,@amitabh_pun
+CON-011,Nitin Shinde,Logistics Manager,SITE-PUN-03,nitin.shinde@resiliencehub.corp,+91-98220-44002,@nitin_pun
+CON-012,Deepak Saxena,Site Manager,SITE-DEL-04,deepak.saxena@resiliencehub.corp,+91-98110-55001,@deepak_del
+CON-013,Pooja Malhotra,Customer Service Lead,SITE-DEL-04,pooja.m@resiliencehub.corp,+91-98110-55002,@pooja_cs
+CON-014,Harish Chowdary,Site Manager,SITE-HYD-05,harish.c@resiliencehub.corp,+91-98490-66001,@harish_hyd
+CON-015,Subhashish Roy,Site Manager,SITE-KOL-06,subhashish.roy@resiliencehub.corp,+91-98300-77001,@subhash_kol
+CON-016,Milind Patil,Site Manager,SITE-MUM-07,milind.patil@resiliencehub.corp,+91-98200-88001,@milind_mum
+CON-017,David Lee,Site Manager,SITE-SIN-08,david.lee@resiliencehub.corp,+65-6789-5501,@david_sin
+CON-018,Dr. Arvind Swaminathan,Escalation Director,SITE-CHN-01,arvind.s@resiliencehub.corp,+91-98401-22999,@arvind_vp
+CON-019,Ramesh Varma,Supplier Account Rep,SUP-001,ramesh.varma@apexmicro.in,+91-98401-11221,@ramesh_apex
+CON-020,Anand Deshmukh,Supplier Account Rep,SUP-002,anand.d@bharatpowersemi.com,+91-98220-33442,@anand_bps
+CON-021,Kelvin Tan,Supplier Account Rep,SUP-003,kelvin.tan@dynamicdisplays.sg,+65-6789-1234,@kelvin_dd
+CON-022,Pooja Hegde,Supplier Account Rep,SUP-004,pooja.h@siliconcraft.in,+91-98450-77881,@pooja_sc
+CON-023,Srinivas Rao,Supplier Account Rep,SUP-005,srinivas@deccanfasteners.com,+91-98490-55661,@srinivas_df
+CON-024,Farhan Merchant,Supplier Account Rep,SUP-006,farhan@pacificcircuits.in,+91-98200-44119,@farhan_pcs
+CON-025,Vikram Singh,Supplier Account Rep,SUP-007,vikram.singh@vayurf.com,+91-98110-88992,@vikram_vayu
+CON-026,Selvam Natarajan,Supplier Account Rep,SUP-008,selvam@greenfieldpack.in,+91-94440-22331,@selvam_gfp
+CON-027,Chen Wei,Supplier Account Rep,SUP-009,chen.wei@quicksource.cn,+86-755-8822-1100,@chen_qs
+CON-028,Debabrata Sen,Supplier Account Rep,SUP-010,debabrata@easternenergy.co.in,+91-98300-66773,@debabrata_ee
+CON-029,Nilesh Kulkarni,Supplier Account Rep,SUP-011,nilesh@vertexpolymers.in,+91-98230-99881,@nilesh_vp
+CON-030,Deepa Sundaram,Supplier Account Rep,SUP-012,deepa@zenithfastline.com,+91-98800-12345,@deepa_zfl
+CON-031,Capt. Rajesh Bhardwaj,Carrier Dispatcher,LANE-MUM-PUN-RD,dispatch@gatiewe.com,+91-98200-99112,@gati_dispatch
+CON-032,Sunil Jadhav,Carrier Dispatcher,LANE-MUM-PUN-RL,cargo.pune@railnet.gov.in,+91-98220-88221,@cr_cargo
+CON-033,Manish Chawla,Carrier Dispatcher,LANE-CHN-DEL-AR,operations@bluedart.com,+91-98110-77334,@bluedart_ops

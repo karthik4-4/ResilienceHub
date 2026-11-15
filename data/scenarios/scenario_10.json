@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S10",
+  "name": "Failure Injection: Inventory Agent Degraded Mode",
+  "description": "Simulated timeout / failure of Inventory Agent. Orchestrator posts DEGRADED marker; Coordinator detects degraded state, applies confidence penalty, and executes safe HOLD.",
+  "report_text": "DISRUPTION NOTICE: Supplier Apex Micro Systems delays SKU-1042 delivery by 6 days to Chennai Plant (SITE-CHN-01). Severity: 3.",
+  "expected_action": "HOLD",
+  "expected_chosen_option_keyword": "HOLD",
+  "expected_parties_to_notify": ["Supply Chain Planner"],
+  "test_purpose": "System resilience under degraded knowledge: missing critical inventory data triggers safe fallback with explicit DEGRADED audit trail."
+}

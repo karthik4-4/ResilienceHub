@@ -1,0 +1,10 @@
+[
+  {
+    "role": "Supply Chain Planner",
+    "name": "Meera Joshi",
+    "channel": "email",
+    "urgency": "medium",
+    "recipient_address": "meera.joshi@resiliencehub.corp",
+    "message": "Subject: [MEDIUM] Supply Chain Mitigation Order - HOLD (Case DEBUG-S6)\n\nDear Meera Joshi (Supply Chain Planner),\n\nA supply chain disruption response decision has been finalized for Case DEBUG-S6.\n\nMITIGATION ACTION: HOLD\nCHOSEN OPTION: HOLD\nTOTAL ESTIMATED COST: INR 1072.5\nCONFIDENCE: 90.0%\n\nDECISION RATIONALE:\nHOLD option HOLD chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.\n\nCITED BLACKBOARD EVIDENCE:\n\n- E-0004\n\n- E-0005\n\n- E-0006\n\n- E-0007\n\n\nPlease take required operational actions immediately.\n\nBest regards,\nSupply Chain Disruption Response Coordinator (SCDRC)\nAutonomous Blackboard Operations Engine"
+  }
+]

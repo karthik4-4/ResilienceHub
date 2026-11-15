@@ -1,0 +1,631 @@
+{
+  "case_id": "EVAL-S6",
+  "report": {
+    "report_id": "REP-EVAL-S6",
+    "text": "DISRUPTION NOTICE: Supplier Apex Micro Systems (SUP-001) unable to supply SKU-1042 for Chennai Plant (SITE-CHN-01) due to cleanroom contamination for 12 days. Low-cost vendor SUP-009 has offered stock. Severity: 4.",
+    "reported_at": "2026-11-15T12:34:35.408588",
+    "source": "MANUAL"
+  },
+  "entries": [
+    {
+      "entry_id": "E-0001",
+      "type": "DISRUPTION_PROFILE",
+      "author": "monitor",
+      "payload": {
+        "disruption_type": "SUPPLIER_DELAY",
+        "severity": 4,
+        "start_date": null,
+        "expected_duration_days": 12,
+        "source_text": "DISRUPTION NOTICE: Supplier Apex Micro Systems (SUP-001) unable to supply SKU-1042 for Chennai Plant (SITE-CHN-01) due to cleanroom contamination for 12 days. Low-cost vendor SUP-009 has offered stock. Severity: 4.",
+        "root_cause": "Cleanroom contamination at primary supplier Apex Micro Systems"
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "DISRUPTION NOTICE: Supplier Apex Micro Systems (SUP-001) unable to supply SKU-1042 for Chennai Plant (SITE-CHN-01) due to cleanroom contamination for 12 days. Low-cost vendor SUP-009 has offered stock"
+        }
+      ],
+      "created_at": "2026-11-15T12:34:35.410296",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0002",
+      "type": "AFFECTED_ITEMS",
+      "author": "monitor",
+      "payload": {
+        "items": [
+          {
+            "sku": "SKU-1042",
+            "name": "Industrial Microcontroller Core SOC",
+            "qty_at_risk": 1200,
+            "criticality": "CRITICAL"
+          }
+        ],
+        "unresolved_tokens": []
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "DISRUPTION NOTICE: Supplier Apex Micro Systems (SUP-001) unable to supply SKU-1042 for Chennai Plant (SITE-CHN-01) due to cleanroom contamination for 12 days. Low-cost vendor SUP-009 has offered stock"
+        }
+      ],
+      "created_at": "2026-11-15T12:34:35.410333",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0003",
+      "type": "AFFECTED_SITES",
+      "author": "monitor",
+      "payload": {
+        "sites": [
+          {
+            "site_id": "SITE-CHN-01",
+            "name": "Chennai Electronics Manufacturing Plant",
+            "role": "PLANT",
+            "region": "Tamil Nadu"
+          }
+        ],
+        "unresolved_tokens": []
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "DISRUPTION NOTICE: Supplier Apex Micro Systems (SUP-001) unable to supply SKU-1042 for Chennai Plant (SITE-CHN-01) due to cleanroom contamination for 12 days. Low-cost vendor SUP-009 has offered stock"
+        }
+      ],
+      "created_at": "2026-11-15T12:34:35.410350",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0004",
+      "type": "INVENTORY_STATUS",
+      "author": "inventory",
+      "payload": {
+        "inventory": [
+          {
+            "sku": "SKU-1042",
+            "site_id": "SITE-CHN-01",
+            "on_hand": 480,
+            "in_transit": 0,
+            "safety_stock": 300,
+            "daily_demand": 120.0,
+            "days_of_cover": 4.0,
+            "status": "STOCKOUT_RISK",
+            "projected_stockout_date": null
+          }
+        ],
+        "summary": "SKU-1042 @ SITE-CHN-01: 4.0 days cover (Status: STOCKOUT_RISK)"
+      },
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "evidence_id": "EV-INV-001",
+          "source_type": "DATABASE",
+          "citation": "inventory table (SKU-1042 @ SITE-CHN-01)",
+          "snippet": "on_hand=480, safety_stock=300, demand=120.0/day, in_transit=0"
+        }
+      ],
+      "created_at": "2026-11-15T12:34:35.411828",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0005",
+      "type": "SUPPLIER_OPTIONS",
+      "author": "supplier",
+      "payload": {
+        "options": [
+          {
+            "supplier_id": "SUP-001",
+            "supplier_name": "Apex Micro Systems",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1450.0,
+            "moq": 500,
+            "lead_time_days": 12,
+            "capacity": 5000,
+            "reliability_score": 0.92,
+            "contract_ref": "CTR-SUP001-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-012",
+            "supplier_name": "Zenith Fastline Electronics",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1680.0,
+            "moq": 200,
+            "lead_time_days": 4,
+            "capacity": 2000,
+            "reliability_score": 0.94,
+            "contract_ref": "CTR-SUP012-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-004",
+            "supplier_name": "Silicon Craft Technologies",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1520.0,
+            "moq": 300,
+            "lead_time_days": 5,
+            "capacity": 3000,
+            "reliability_score": 0.96,
+            "contract_ref": "CTR-SUP004-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-009",
+            "supplier_name": "QuickSource Components",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1150.0,
+            "moq": 1000,
+            "lead_time_days": 14,
+            "capacity": 10000,
+            "reliability_score": 0.72,
+            "contract_ref": "CTR-SUP009-2025",
+            "qualified": false,
+            "disqualification_reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause"
+          }
+        ],
+        "summary": "Evaluated 4 supplier options across 1 SKUs."
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-0052",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 3: Force Majeure & Disruption Protocols",
+          "snippet": "### Section 3: Force Majeure & Disruption Protocols\nIn the event of manufacturing line stoppages, component shortages, or wafer fabrication delays exceeding 7 calendar days:\n- The Supplier must provide written notification within 24 hours of identifying the delay.\n- ResilienceHub"
+        },
+        {
+          "evidence_id": "EV-0053",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 2: Pricing and Standard Lead Times",
+          "snippet": "### Section 2: Pricing and Standard Lead Times\n- SKU-1042: Base Contract Price INR 1,450 per unit. Standard delivery lead time is 12 business days from purchase order confirmation.\n- SKU-1001: Base Contract Price INR 650 per unit. Standard delivery lead time is 10 business days."
+        },
+        {
+          "evidence_id": "EV-0054",
+          "source_type": "RAG",
+          "citation": "CTR-SUP012-2025 \u00a7 Section 2: Terms and Pricing",
+          "snippet": "### Section 2: Terms and Pricing\n- SKU-1042: Express unit price INR 1,680 per unit. MOQ: 200 units.\n- Standard lead time: 4 business days. Expedite lead time: 2 business days via chartered cargo.\n- Fixed expedite handling charge: INR 45,000 per order."
+        },
+        {
+          "evidence_id": "EV-0055",
+          "source_type": "RAG",
+          "citation": "CTR-SUP012-2025 \u00a7 Section 1: Rapid Dispatch Services",
+          "snippet": "### Section 1: Rapid Dispatch Services\nZenith Fastline Electronics provides express spot inventory for critical electronic microcontrollers (SKU-1042) and power management ICs. Units are pre-inspected and stocked at Bengaluru Domestic Airport Bonded Warehouse."
+        },
+        {
+          "evidence_id": "EV-0056",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 2: Lead Times and MOQ",
+          "snippet": "### Section 2: Lead Times and MOQ\n- SKU-1042: Contract price INR 1,520 per unit. Standard lead time is 5 business days.\n- SKU-1001: Contract price INR 680 per unit. Standard lead time is 6 business days.\n- SKU-1002: Contract price INR 295 per unit. Standard lead time is 5 busines"
+        },
+        {
+          "evidence_id": "EV-0057",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 4: Mutual Non-Exclusivity",
+          "snippet": "### Section 4: Mutual Non-Exclusivity\nResilienceHub is free to place secondary and surge demand purchase orders without minimum annual commitment quotas, provided orders meet MOQ thresholds."
+        },
+        {
+          "evidence_id": "EV-0058",
+          "source_type": "RAG",
+          "citation": "CTR-SUP009-2025 \u00a7 Section 2: Pricing and Minimum Order",
+          "snippet": "### Section 2: Pricing and Minimum Order\n- SKU-1042: Quoted price INR 1,150 per unit. MOQ: 1,000 units.\n- Standard lead time: 14 business days via regular maritime/air consolidation."
+        },
+        {
+          "evidence_id": "EV-0059",
+          "source_type": "RAG",
+          "citation": "CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause",
+          "snippet": "### Section 4.2: Exclusivity and Qualification Disqualification Clause\nUnder ResilienceHub Quality Policy clause 4.2 and Customer OEM Exclusivity Agreements, uncertified grey-market or unverified spot-market suppliers cannot supply critical SOCs (including SKU-1042) for Tier-1 au"
+        }
+      ],
+      "created_at": "2026-11-15T12:34:35.417483",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
+      "type": "ROUTE_OPTIONS",
+      "author": "route",
+      "payload": {
+        "options": [
+          {
+            "route_id": "LANE-BLR-CHN-RD",
+            "origin": "SITE-BLR-02",
+            "dest": "SITE-CHN-01",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 1,
+            "freight_cost_per_unit_inr": 20.0,
+            "capacity_units": 25000,
+            "risk_rating": "LOW",
+            "carrier": "VRL Logistics",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-BLR-CHN-RL",
+            "origin": "SITE-BLR-02",
+            "dest": "SITE-CHN-01",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 15.0,
+            "capacity_units": 40000,
+            "risk_rating": "LOW",
+            "carrier": "Southern Railway Freight",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-SIN-CHN-SE",
+            "origin": "SITE-SIN-08",
+            "dest": "SITE-CHN-01",
+            "mode": "SEA",
+            "added_delay_days": 0,
+            "transit_days": 8,
+            "freight_cost_per_unit_inr": 45.0,
+            "capacity_units": 50000,
+            "risk_rating": "MEDIUM",
+            "carrier": "Maersk Line",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-SIN-CHN-AR",
+            "origin": "SITE-SIN-08",
+            "dest": "SITE-CHN-01",
+            "mode": "AIR",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 350.0,
+            "capacity_units": 4000,
+            "risk_rating": "LOW",
+            "carrier": "Singapore Airlines Cargo",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-KOL-CHN-RD",
+            "origin": "SITE-KOL-06",
+            "dest": "SITE-CHN-01",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 52.0,
+            "capacity_units": 10000,
+            "risk_rating": "MEDIUM",
+            "carrier": "Safechem Logistics",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-KOL-CHN-RL",
+            "origin": "SITE-KOL-06",
+            "dest": "SITE-CHN-01",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 38.0,
+            "capacity_units": 20000,
+            "risk_rating": "LOW",
+            "carrier": "CONCOR",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-HYD-CHN-RD",
+            "origin": "SITE-HYD-05",
+            "dest": "SITE-CHN-01",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 28.0,
+            "capacity_units": 18000,
+            "risk_rating": "LOW",
+            "carrier": "TCI Freight",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-HYD-CHN-RL",
+            "origin": "SITE-HYD-05",
+            "dest": "SITE-CHN-01",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 20.0,
+            "capacity_units": 25000,
+            "risk_rating": "LOW",
+            "carrier": "South Central Railway",
+            "advisory_ref": null
+          }
+        ],
+        "summary": "Identified 8 route options across connected logistics corridors."
+      },
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "evidence_id": "EV-0060",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
+          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
+        },
+        {
+          "evidence_id": "EV-0061",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
+          "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
+        },
+        {
+          "evidence_id": "EV-0062",
+          "source_type": "RAG",
+          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
+          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
+        }
+      ],
+      "created_at": "2026-11-15T12:34:35.421538",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0007",
+      "type": "COST_ESTIMATES",
+      "author": "cost",
+      "payload": {
+        "estimates": [
+          {
+            "option_id": "REORDER-SUP-001",
+            "action_type": "REORDER",
+            "target_entity": "SUP-001",
+            "purchase_cost_inr": 1740000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 11484.0,
+            "stockout_penalty_inr": 576000.0,
+            "total_cost_inr": 2369484.0,
+            "arrival_days": 12,
+            "is_viable": false,
+            "non_viability_reason": "Lead time (12 days) arrives after projected stockout on day 4.0",
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 500) at INR 1450.00/unit",
+              "Holding cost for 12 days lead time: INR 11484.00",
+              "Stockout risk penalty for 8.0 days shortfall: INR 576000.00"
+            ]
+          },
+          {
+            "option_id": "REORDER-SUP-012",
+            "action_type": "REORDER",
+            "target_entity": "SUP-012",
+            "purchase_cost_inr": 2016000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 4435.2,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 2062435.2,
+            "arrival_days": 4,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 200) at INR 1680.00/unit",
+              "Holding cost for 4 days lead time: INR 4435.20"
+            ]
+          },
+          {
+            "option_id": "REORDER-SUP-004",
+            "action_type": "REORDER",
+            "target_entity": "SUP-004",
+            "purchase_cost_inr": 1824000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 5016.0,
+            "stockout_penalty_inr": 72000.0,
+            "total_cost_inr": 1943016.0,
+            "arrival_days": 5,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 300) at INR 1520.00/unit",
+              "Holding cost for 5 days lead time: INR 5016.00",
+              "Stockout risk penalty for 1.0 days shortfall: INR 72000.00"
+            ]
+          },
+          {
+            "option_id": "REORDER-SUP-009",
+            "action_type": "REORDER",
+            "target_entity": "SUP-009",
+            "purchase_cost_inr": 1380000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 10626.0,
+            "stockout_penalty_inr": 720000.0,
+            "total_cost_inr": 2152626.0,
+            "arrival_days": 14,
+            "is_viable": false,
+            "non_viability_reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause",
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 1000) at INR 1150.00/unit",
+              "Holding cost for 14 days lead time: INR 10626.00",
+              "Stockout risk penalty for 10.0 days shortfall: INR 720000.00"
+            ]
+          },
+          {
+            "option_id": "HOLD",
+            "action_type": "HOLD",
+            "target_entity": "HOLD",
+            "purchase_cost_inr": 0.0,
+            "freight_cost_inr": 0.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 11484.0,
+            "stockout_penalty_inr": 2880000.0,
+            "total_cost_inr": 2891484.0,
+            "arrival_days": 12,
+            "is_viable": false,
+            "non_viability_reason": "Stock cover (4.0 days) is insufficient for disruption duration (12 days)",
+            "assumptions": [
+              "Buffer holding cost while waiting 12 days: INR 11484.00",
+              "Imminent stockout penalty for unmitigated delay: INR 2880000.00"
+            ]
+          }
+        ],
+        "methodology": "Total cost model integrating purchase, freight, expedite fees, transit holding, and stockout risk penalty."
+      },
+      "confidence": 0.96,
+      "evidence": [
+        {
+          "evidence_id": "EV-COST-001",
+          "source_type": "RULE",
+          "citation": "SCDRC Enterprise Cost Model",
+          "snippet": "Evaluated 5 options for SKU SKU-1042 at unit base INR 1450.00"
+        }
+      ],
+      "created_at": "2026-11-15T12:34:35.423590",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0008",
+      "type": "DECISION",
+      "author": "coordinator",
+      "payload": {
+        "action": "REORDER",
+        "chosen_option_id": "SUP-004",
+        "total_cost_inr": 1943016.0,
+        "rationale": "All alternative options are non-viable or blocked. Escalating to human supervision per cited entries: E-0004, E-0005, E-0006, E-0007.",
+        "cited_entry_ids": [
+          "E-0004",
+          "E-0005",
+          "E-0006",
+          "E-0007"
+        ],
+        "rejected_options": [
+          {
+            "option": "REORDER-SUP-001",
+            "reason": "Lead time (12 days) arrives after projected stockout on day 4.0"
+          },
+          {
+            "option": "REORDER-SUP-009",
+            "reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause"
+          },
+          {
+            "option": "HOLD",
+            "reason": "Stock cover (4.0 days) is insufficient for disruption duration (12 days)"
+          },
+          {
+            "option": "REORDER-SUP-012",
+            "reason": "Viable but higher total landed cost (INR 2,062,435.20) vs chosen option (INR 1,943,016.00)"
+          }
+        ],
+        "confidence": 0.9,
+        "notify_list": []
+      },
+      "confidence": 0.9,
+      "evidence": [],
+      "created_at": "2026-11-15T12:34:35.424065",
+      "version": 1,
+      "supersedes": null
+    }
+  ],
+  "status": "DECIDED",
+  "audit_log": [
+    {
+      "event_id": "AUD-0001",
+      "event_type": "CASE_INITIALIZED",
+      "agent": "orchestrator",
+      "details": "Case EVAL-S6 initialized with report: DISRUPTION NOTICE: Supplier Apex Micro Systems (SUP-001) unable to supply SKU-10...",
+      "timestamp": "2026-11-15T12:34:35.408611"
+    },
+    {
+      "event_id": "AUD-0002",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
+      "timestamp": "2026-11-15T12:34:35.408626"
+    },
+    {
+      "event_id": "AUD-0003",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
+      "timestamp": "2026-11-15T12:34:35.408632"
+    },
+    {
+      "event_id": "AUD-0004",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.95",
+      "timestamp": "2026-11-15T12:34:35.410312"
+    },
+    {
+      "event_id": "AUD-0005",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.95",
+      "timestamp": "2026-11-15T12:34:35.410338"
+    },
+    {
+      "event_id": "AUD-0006",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.95",
+      "timestamp": "2026-11-15T12:34:35.410354"
+    },
+    {
+      "event_id": "AUD-0007",
+      "event_type": "ENTRY_POSTED",
+      "agent": "inventory",
+      "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
+      "timestamp": "2026-11-15T12:34:35.411839"
+    },
+    {
+      "event_id": "AUD-0008",
+      "event_type": "ENTRY_POSTED",
+      "agent": "supplier",
+      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T12:34:35.417499"
+    },
+    {
+      "event_id": "AUD-0009",
+      "event_type": "ENTRY_POSTED",
+      "agent": "route",
+      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T12:34:35.421557"
+    },
+    {
+      "event_id": "AUD-0010",
+      "event_type": "ENTRY_POSTED",
+      "agent": "cost",
+      "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
+      "timestamp": "2026-11-15T12:34:35.423602"
+    },
+    {
+      "event_id": "AUD-0011",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
+      "timestamp": "2026-11-15T12:34:35.423625"
+    },
+    {
+      "event_id": "AUD-0012",
+      "event_type": "ENTRY_POSTED",
+      "agent": "coordinator",
+      "details": "Posted E-0008 (DECISION) with confidence 0.90",
+      "timestamp": "2026-11-15T12:34:35.424073"
+    },
+    {
+      "event_id": "AUD-0013",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from READY to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T12:34:35.424094"
+    }
+  ],
+  "created_at": "2026-11-15T12:34:35.428206"
+}

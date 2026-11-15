@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S3",
+  "name": "Minor Supplier Delay with High Inventory Buffer",
+  "description": "Minor delay of 2 days reported for SKU-1001 at Bengaluru Plant SITE-BLR-02 where stock cover is 15 days. Expediting or reordering costs outweigh any benefit.",
+  "report_text": "LOGISTICS NOTICE: Supplier Apex Micro Systems (SUP-001) notified a 2-day minor logistics dispatch delay for SKU-1001 to Bengaluru Systems Assembly Plant (SITE-BLR-02). Severity: 2.",
+  "expected_action": "HOLD",
+  "expected_chosen_option_keyword": "HOLD",
+  "expected_parties_to_notify": ["Supply Chain Planner"],
+  "test_purpose": "Doing nothing (HOLD) is rational and cost-optimal when existing stock safely absorbs the variance."
+}

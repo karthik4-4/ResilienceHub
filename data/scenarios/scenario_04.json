@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S4",
+  "name": "Imminent Stockout at Fulfillment Center",
+  "description": "Stockout risk at Delhi NCR Fulfillment Center (SITE-DEL-04) for SKU-1042 (0.5 days cover). Air reroute is fast but exorbitantly priced, sea is too slow, local alternate supplier SUP-004 is cheapest viable.",
+  "report_text": "CRITICAL INCIDENT: Stockout at Delhi NCR Fulfillment Center (SITE-DEL-04) for SKU-1042. Current inventory is critically depleted (50 units). Incoming shipment delayed by 8 days. Need 400 units urgently. Severity: 5.",
+  "expected_action": "REORDER",
+  "expected_chosen_option_keyword": "SUP-004",
+  "expected_parties_to_notify": ["Procurement Manager", "Plant Manager", "Supplier Account Rep"],
+  "test_purpose": "Cost Agent drives choice: faster-but-pricier air expedite is rejected in favor of the cheapest viable supplier delivery."
+}

@@ -1,0 +1,42 @@
+sku,name,category,unit,unit_cost_inr,criticality,standard_order_qty,min_safety_stock
+SKU-1001,Microcontroller Unit ARM Cortex-M4,Electronics,pcs,650,CRITICAL,2000,500
+SKU-1002,Power Management IC 5V/3.3V,Electronics,pcs,280,CRITICAL,3000,800
+SKU-1003,Multilayer Ceramic Capacitor 10uF,Electronics,pcs,12,MEDIUM,10000,2500
+SKU-1004,Surface Mount Resistor 10k Ohm,Electronics,pcs,4,LOW,20000,5000
+SKU-1005,WiFi/Bluetooth Combo Module ESP32,Electronics,pcs,380,HIGH,2500,600
+SKU-1006,Lithium Polymer Battery 5000mAh,Energy,pcs,920,CRITICAL,1500,400
+SKU-1007,Battery Protection Circuit PCB,Electronics,pcs,185,HIGH,2000,500
+SKU-1008,TFT LCD Display Panel 4.3 inch,Displays,pcs,1150,CRITICAL,1000,300
+SKU-1009,Capacitive Touch Screen Sensor,Displays,pcs,450,HIGH,1200,350
+SKU-1010,Aluminium Alloy Heatsink Extruded,Mechanical,pcs,140,MEDIUM,3000,750
+SKU-1011,Injection Molded Polycarbonate Enclosure,Plastics,pcs,210,HIGH,2500,600
+SKU-1012,Silicon Waterproof Gasket Ring,Plastics,pcs,35,MEDIUM,5000,1200
+SKU-1013,Stainless Steel M3 Fastener Set,Hardware,sets,15,LOW,15000,3000
+SKU-1014,Corrugated Master Shipping Carton 5-Ply,Packaging,pcs,65,MEDIUM,4000,1000
+SKU-1015,Antistatic Bubble Wrap Roll 100m,Packaging,rolls,180,LOW,500,100
+SKU-1016,USB-C Braided Cable Harness 1m,Cables,pcs,95,HIGH,3500,800
+SKU-1017,Internal Ribbon Cable 24-Pin FFC,Cables,pcs,48,MEDIUM,4000,1000
+SKU-1018,MEMS Digital Accelerometer 6-Axis,Electronics,pcs,320,CRITICAL,2000,450
+SKU-1019,Precision Temperature Sensor I2C,Electronics,pcs,110,MEDIUM,3000,700
+SKU-1020,Solder Paste Lead-Free SAC305 500g,Consumables,jars,1850,HIGH,100,25
+SKU-1021,Conformal Coating Silicone Spray 400ml,Consumables,cans,720,HIGH,200,50
+SKU-1022,Thermal Interface Conductive Pad 1mm,Consumables,sheets,45,MEDIUM,2500,600
+SKU-1023,RJ45 Ethernet MagJack Connector,Connectors,pcs,130,HIGH,2000,500
+SKU-1024,DC Power Barrel Jack 2.1mm,Connectors,pcs,38,LOW,4000,1000
+SKU-1025,Tactile Push Button Switch SMD,Electromechanical,pcs,8,LOW,10000,2500
+SKU-1026,Rotary Encoder with Push Switch,Electromechanical,pcs,165,MEDIUM,1500,350
+SKU-1027,Piezo Electric Buzzer 85dB,Acoustic,pcs,25,LOW,5000,1000
+SKU-1028,High Precision Crystal Oscillator 32MHz,Electronics,pcs,42,HIGH,5000,1200
+SKU-1029,EEPROM Memory IC 256Kbit SPI,Electronics,pcs,95,HIGH,3000,800
+SKU-1030,NOR Flash Memory IC 64Mbit SPI,Electronics,pcs,175,CRITICAL,2500,600
+SKU-1031,Step-Down Buck Regulator IC 3A,Electronics,pcs,145,HIGH,3500,900
+SKU-1032,Optocoupler Isolation Transistor DIP-4,Electronics,pcs,28,MEDIUM,6000,1500
+SKU-1033,Ferrite Bead EMI Filter 0805,Electronics,pcs,6,LOW,15000,4000
+SKU-1034,SMD Fuse 2A Quick Acting 1206,Hardware,pcs,18,HIGH,5000,1200
+SKU-1035,Shielded Inductor SMD 10uH,Electronics,pcs,55,MEDIUM,4000,1000
+SKU-1036,Heat Shrink Tubing 3mm Black 100m,Consumables,spools,240,LOW,300,75
+SKU-1037,Barcode QR Label Thermal Roll 1000,Packaging,rolls,125,MEDIUM,600,150
+SKU-1038,Desiccant Silica Gel Pouch 5g,Packaging,pouches,3,LOW,20000,5000
+SKU-1039,Copper Grounding Braid Strap 150mm,Hardware,pcs,62,MEDIUM,2000,500
+SKU-1040,Tamper-Evident Security Seal Label,Packaging,sheets,85,HIGH,1000,250
+SKU-1042,Industrial Microcontroller Core SOC,Electronics,pcs,1450,CRITICAL,1200,300

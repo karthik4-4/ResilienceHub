@@ -1,0 +1,13 @@
+category,annual_holding_cost_rate,daily_holding_factor,stockout_penalty_per_unit_day,air_expedite_premium_rate,handling_charge_inr
+Electronics,0.20,0.00055,300.0,3.5,5000.0
+Displays,0.18,0.00049,250.0,3.0,4000.0
+Energy,0.22,0.00060,350.0,4.0,6000.0
+Mechanical,0.15,0.00041,120.0,2.5,3000.0
+Plastics,0.14,0.00038,80.0,2.2,2500.0
+Hardware,0.12,0.00033,40.0,2.0,1500.0
+Packaging,0.10,0.00027,30.0,1.8,1000.0
+Consumables,0.16,0.00044,150.0,2.5,2000.0
+Connectors,0.15,0.00041,100.0,2.2,2000.0
+Acoustic,0.14,0.00038,50.0,2.0,1500.0
+Cables,0.15,0.00041,90.0,2.2,2000.0
+DEFAULT,0.18,0.00049,200.0,2.5,3000.0

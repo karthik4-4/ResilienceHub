@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S2",
+  "name": "Route Block with Healthy Stock Cover",
+  "description": "Highway blocked on Mumbai-Pune corridor LANE-MUM-PUN-RD. Destination site SITE-PUN-03 has healthy stock (21 days cover). Alternative rail corridor LANE-MUM-PUN-RL adds 2 days delay.",
+  "report_text": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Severity: 3.",
+  "expected_action": "REROUTE",
+  "expected_chosen_option_keyword": "LANE-MUM-PUN-RL",
+  "expected_parties_to_notify": ["Logistics Manager", "Carrier Dispatcher"],
+  "test_purpose": "Reroute chosen when healthy stock cover can absorb the minor delay without incurring costly reorders."
+}

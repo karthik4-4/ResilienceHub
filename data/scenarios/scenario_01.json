@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S1",
+  "name": "Primary Supplier Delay with Low Plant Cover",
+  "description": "Primary supplier SUP-001 delayed 10 days for SKU-1042 at Chennai Plant SITE-CHN-01. Plant cover is only 4 days. Alternate supplier SUP-004 is qualified and can deliver in 5 days.",
+  "report_text": "URGENT DISRUPTION REPORT: Primary supplier Apex Micro Systems (SUP-001) reports a 10-day delay in wafer production affecting shipment SHP-8801 of 1200 units of SKU-1042 destined for Chennai Electronics Manufacturing Plant (SITE-CHN-01). Severity: 4.",
+  "expected_action": "REORDER",
+  "expected_chosen_option_keyword": "SUP-004",
+  "expected_parties_to_notify": ["Procurement Manager", "Plant Manager", "Supplier Account Rep"],
+  "test_purpose": "Alternative supplier path, cheapest viable option selected."
+}

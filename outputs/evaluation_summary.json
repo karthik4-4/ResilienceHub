@@ -1,0 +1,192 @@
+{
+  "metrics": {
+    "total_scenarios": 10,
+    "accuracy_rate_pct": 100.0,
+    "optimality_rate_pct": 100.0,
+    "grounding_rate_pct": 100.0,
+    "avg_latency_seconds": 0.03,
+    "total_tokens": 6000
+  },
+  "scenarios": [
+    {
+      "scenario_id": "S1",
+      "name": "Primary Supplier Delay with Low Plant Cover",
+      "expected_action": "REORDER",
+      "actual_action": "REORDER",
+      "is_match": true,
+      "total_cost_inr": 1943016.0,
+      "chosen_option": "SUP-004",
+      "latency_seconds": 0.05,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 4
+    },
+    {
+      "scenario_id": "S2",
+      "name": "Route Block with Healthy Stock Cover",
+      "expected_action": "REROUTE",
+      "actual_action": "REROUTE",
+      "is_match": true,
+      "total_cost_inr": 18714.0,
+      "chosen_option": "LANE-MUM-PUN-RL",
+      "latency_seconds": 0.02,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 4
+    },
+    {
+      "scenario_id": "S3",
+      "name": "Minor Supplier Delay with High Inventory Buffer",
+      "expected_action": "HOLD",
+      "actual_action": "HOLD",
+      "is_match": true,
+      "total_cost_inr": 1072.5,
+      "chosen_option": "HOLD",
+      "latency_seconds": 0.02,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 1
+    },
+    {
+      "scenario_id": "S4",
+      "name": "Imminent Stockout at Fulfillment Center",
+      "expected_action": "REORDER",
+      "actual_action": "REORDER",
+      "is_match": true,
+      "total_cost_inr": 635672.0,
+      "chosen_option": "SUP-004",
+      "latency_seconds": 0.02,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 3
+    },
+    {
+      "scenario_id": "S5",
+      "name": "Trap Case: Cheapest Option is Non-Viable",
+      "expected_action": "REORDER",
+      "actual_action": "REORDER",
+      "is_match": true,
+      "total_cost_inr": 1943016.0,
+      "chosen_option": "SUP-004",
+      "latency_seconds": 0.02,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 4
+    },
+    {
+      "scenario_id": "S6",
+      "name": "Contractual Exclusivity & Qualification Exclusion",
+      "expected_action": "REORDER",
+      "actual_action": "REORDER",
+      "is_match": true,
+      "total_cost_inr": 1943016.0,
+      "chosen_option": "SUP-004",
+      "latency_seconds": 0.02,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 4
+    },
+    {
+      "scenario_id": "S7",
+      "name": "No Viable Option Exists - Safe Escalation",
+      "expected_action": "HOLD",
+      "actual_action": "HOLD",
+      "is_match": true,
+      "total_cost_inr": 0.0,
+      "chosen_option": "HOLD",
+      "latency_seconds": 0.02,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 1
+    },
+    {
+      "scenario_id": "S8",
+      "name": "Ambiguous & Vague Report Handling",
+      "expected_action": "HOLD",
+      "actual_action": "HOLD",
+      "is_match": true,
+      "total_cost_inr": 0.0,
+      "chosen_option": "HOLD",
+      "latency_seconds": 0.01,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 1
+    },
+    {
+      "scenario_id": "S9",
+      "name": "Multi-SKU Multi-Site Disruption",
+      "expected_action": "REORDER",
+      "actual_action": "REORDER",
+      "is_match": true,
+      "total_cost_inr": 781622.5,
+      "chosen_option": "SUP-004",
+      "latency_seconds": 0.03,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0006",
+        "E-0007"
+      ],
+      "notifications_dispatched": 3
+    },
+    {
+      "scenario_id": "S10",
+      "name": "Failure Injection: Inventory Agent Degraded Mode",
+      "expected_action": "HOLD",
+      "actual_action": "HOLD",
+      "is_match": true,
+      "total_cost_inr": 0.0,
+      "chosen_option": "HOLD",
+      "latency_seconds": 0.07,
+      "tokens": 600,
+      "cited_entries": [
+        "E-0004",
+        "E-0005",
+        "E-0007",
+        "E-0006"
+      ],
+      "notifications_dispatched": 1
+    }
+  ]
+}

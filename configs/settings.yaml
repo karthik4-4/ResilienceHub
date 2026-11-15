@@ -1,0 +1,39 @@
+app:
+  name: "Supply Chain Disruption Response Coordinator (SCDRC)"
+  version: "0.1.0"
+  environment: "production"
+
+models:
+  reasoning: "llama-3.3-70b-versatile"
+  fast: "llama-3.1-8b-instant"
+  temperature: 0.1
+  max_retries: 3
+  timeout_seconds: 30
+  rate_limit_concurrency: 2
+
+timeouts:
+  agent_timeout_seconds: 20
+  case_timeout_seconds: 60
+
+thresholds:
+  stockout_risk_days: 7
+  critical_cover_days: 3
+  finance_approval_amount_inr: 1500000
+  minimum_confidence: 0.70
+
+weights:
+  cost_weight: 0.50
+  lead_time_weight: 0.30
+  reliability_weight: 0.20
+
+cost_rates:
+  default_holding_cost_rate_annual: 0.18
+  default_stockout_penalty_per_unit_day: 250.0
+  expedite_base_fee_inr: 25000.0
+
+paths:
+  database_url: "sqlite:///./data/scdrc.db"
+  chroma_persist_dir: "./data/chroma_db"
+  outputs_dir: "./outputs"
+  scenarios_dir: "./data/scenarios"
+  seed_dir: "./data/seed"

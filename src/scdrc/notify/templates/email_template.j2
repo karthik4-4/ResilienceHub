@@ -1,0 +1,24 @@
+Subject: [{{ urgency | upper }}] Supply Chain Mitigation Order - {{ action }} (Case {{ case_id }})
+
+Dear {{ recipient_name }} ({{ role }}),
+
+A supply chain disruption response decision has been finalized for Case {{ case_id }}.
+
+MITIGATION ACTION: {{ action }}
+CHOSEN OPTION: {{ chosen_option }}
+TOTAL ESTIMATED COST: INR {{ total_cost | round(2) }}
+CONFIDENCE: {{ (confidence * 100) | round(1) }}%
+
+DECISION RATIONALE:
+{{ rationale }}
+
+CITED BLACKBOARD EVIDENCE:
+{% for entry in cited_entries %}
+- {{ entry }}
+{% endfor %}
+
+Please take required operational actions immediately.
+
+Best regards,
+Supply Chain Disruption Response Coordinator (SCDRC)
+Autonomous Blackboard Operations Engine

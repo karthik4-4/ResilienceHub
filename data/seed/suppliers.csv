@@ -1,0 +1,13 @@
+supplier_id,name,location,country,reliability_score,payment_terms,status,contact_person,email,phone
+SUP-001,Apex Micro Systems,Chennai,India,0.92,NET30,ACTIVE,Ramesh Varma,ramesh.varma@apexmicro.in,+91-98401-11221
+SUP-002,Bharat Power Semi Ltd,Pune,India,0.89,NET45,ACTIVE,Anand Deshmukh,anand.d@bharatpowersemi.com,+91-98220-33442
+SUP-003,Dynamic Displays Pte,Jurong,Singapore,0.94,NET30,ACTIVE,Kelvin Tan,kelvin.tan@dynamicdisplays.sg,+65-6789-1234
+SUP-004,Silicon Craft Technologies,Bengaluru,India,0.96,NET30,ACTIVE,Pooja Hegde,pooja.h@siliconcraft.in,+91-98450-77881
+SUP-005,Deccan Fasteners & Hardware,Hyderabad,India,0.87,NET60,ACTIVE,Srinivas Rao,srinivas@deccanfasteners.com,+91-98490-55661
+SUP-006,Pacific Circuit Solutions,Mumbai,India,0.91,NET30,ACTIVE,Farhan Merchant,farhan@pacificcircuits.in,+91-98200-44119
+SUP-007,Vayu Telecom & RF,Gurugram,India,0.88,NET30,ACTIVE,Vikram Singh,vikram.singh@vayurf.com,+91-98110-88992
+SUP-008,Greenfield Packaging Corp,Chennai,India,0.93,NET45,ACTIVE,Selvam Natarajan,selvam@greenfieldpack.in,+91-94440-22331
+SUP-009,QuickSource Components,Shenzhen,China,0.72,PREPAID,PROBATION,Chen Wei,chen.wei@quicksource.cn,+86-755-8822-1100
+SUP-010,Eastern Energy Storage,Kolkata,India,0.85,NET30,ACTIVE,Debabrata Sen,debabrata@easternenergy.co.in,+91-98300-66773
+SUP-011,Vertex Polymers & Enclosures,Pune,India,0.90,NET45,ACTIVE,Nilesh Kulkarni,nilesh@vertexpolymers.in,+91-98230-99881
+SUP-012,Zenith Fastline Electronics,Bengaluru,India,0.94,NET15,ACTIVE,Deepa Sundaram,deepa@zenithfastline.com,+91-98800-12345

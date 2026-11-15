@@ -1,0 +1,9 @@
+site_id,name,role,city,state,country,capacity_units
+SITE-CHN-01,Chennai Electronics Manufacturing Plant,PLANT,Chennai,Tamil Nadu,India,50000
+SITE-BLR-02,Bengaluru Systems Assembly Plant,PLANT,Bengaluru,Karnataka,India,45000
+SITE-PUN-03,Pune Central Distribution Center,DC,Pune,Maharashtra,India,100000
+SITE-DEL-04,Delhi NCR Fulfillment Center,DC,Gurugram,Haryana,India,85000
+SITE-HYD-05,Hyderabad Regional Logistics Hub,DC,Hyderabad,Telangana,India,60000
+SITE-KOL-06,Kolkata Eastern Distribution Depot,HUB,Kolkata,West Bengal,India,35000
+SITE-MUM-07,Mumbai Port Transit Terminal,HUB,Navi Mumbai,Maharashtra,India,40000
+SITE-SIN-08,Singapore Global Distribution Center,HUB,Jurong,Singapore,Singapore,120000

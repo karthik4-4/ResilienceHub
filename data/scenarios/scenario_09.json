@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S9",
+  "name": "Multi-SKU Multi-Site Disruption",
+  "description": "Disruption across multiple SKUs (SKU-1001, SKU-1002) affecting both Chennai Plant SITE-CHN-01 and Bengaluru Plant SITE-BLR-02.",
+  "report_text": "MULTI-SITE ALERT: Power surge at Bharat Power Semi Ltd (SUP-002) and Apex Micro Systems (SUP-001) halted deliveries of SKU-1001 and SKU-1002 to both Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02) for 9 days. Severity: 4.",
+  "expected_action": "REORDER",
+  "expected_chosen_option_keyword": "SUP-004",
+  "expected_parties_to_notify": ["Procurement Manager", "Plant Manager", "Supplier Account Rep"],
+  "test_purpose": "Scalability of blackboard: multi-item and multi-site extraction and parallel resolution."
+}

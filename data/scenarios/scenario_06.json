@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S6",
+  "name": "Contractual Exclusivity & Qualification Exclusion",
+  "description": "Supplier SUP-009 offers cheap microcontrollers but RAG contract retrieval highlights Clause 4.2 disqualifying uncertified spot vendors. System enforces contract boundary and rejects SUP-009.",
+  "report_text": "DISRUPTION NOTICE: Supplier Apex Micro Systems (SUP-001) unable to supply SKU-1042 for Chennai Plant (SITE-CHN-01) due to cleanroom contamination for 12 days. Low-cost vendor SUP-009 has offered stock. Severity: 4.",
+  "expected_action": "REORDER",
+  "expected_chosen_option_keyword": "SUP-004",
+  "expected_parties_to_notify": ["Procurement Manager", "Plant Manager", "Supplier Account Rep"],
+  "test_purpose": "RAG-grounded exclusion: probationary supplier SUP-009 rejected due to contract clause 4.2."
+}

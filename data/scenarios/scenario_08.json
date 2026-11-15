@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S8",
+  "name": "Ambiguous & Vague Report Handling",
+  "description": "Vague free-text report with no identifiable SKU or valid site. Monitor Agent refuses to hallucinate entities, flags unresolved tokens with low confidence, and Coordinator defers to HOLD.",
+  "report_text": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week.",
+  "expected_action": "HOLD",
+  "expected_chosen_option_keyword": "HOLD",
+  "expected_parties_to_notify": ["Supply Chain Planner"],
+  "test_purpose": "Monitor honesty: ambiguous inputs yield low confidence and explicit unresolved markers rather than hallucinated SKUs."
+}

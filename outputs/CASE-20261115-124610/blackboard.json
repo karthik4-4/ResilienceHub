@@ -1,0 +1,663 @@
+{
+  "case_id": "CASE-20261115-124610",
+  "report": {
+    "report_id": "REP-CASE-20261115-124610",
+    "text": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Severity: 3.",
+    "reported_at": "2026-11-15T12:46:10.229788",
+    "source": "MANUAL"
+  },
+  "entries": [
+    {
+      "entry_id": "E-0001",
+      "type": "DISRUPTION_PROFILE",
+      "author": "monitor",
+      "payload": {
+        "disruption_type": "ROUTE_BLOCK",
+        "severity": 3,
+        "start_date": null,
+        "expected_duration_days": 3,
+        "source_text": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Severity: 3.",
+        "root_cause": "Monsoon rockslide along Mumbai-Pune expressway"
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Sever"
+        }
+      ],
+      "created_at": "2026-11-15T12:46:10.232170",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0002",
+      "type": "AFFECTED_ITEMS",
+      "author": "monitor",
+      "payload": {
+        "items": [
+          {
+            "sku": "SKU-1042",
+            "name": "Industrial Microcontroller Core SOC",
+            "qty_at_risk": 1200,
+            "criticality": "CRITICAL"
+          }
+        ],
+        "unresolved_tokens": []
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Sever"
+        }
+      ],
+      "created_at": "2026-11-15T12:46:10.232224",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0003",
+      "type": "AFFECTED_SITES",
+      "author": "monitor",
+      "payload": {
+        "sites": [
+          {
+            "site_id": "SITE-PUN-03",
+            "name": "Pune Central Distribution Center",
+            "role": "DC",
+            "region": "Maharashtra"
+          }
+        ],
+        "unresolved_tokens": []
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Sever"
+        }
+      ],
+      "created_at": "2026-11-15T12:46:10.232249",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0004",
+      "type": "INVENTORY_STATUS",
+      "author": "inventory",
+      "payload": {
+        "inventory": [
+          {
+            "sku": "SKU-1042",
+            "site_id": "SITE-PUN-03",
+            "on_hand": 2100,
+            "in_transit": 0,
+            "safety_stock": 500,
+            "daily_demand": 100.0,
+            "days_of_cover": 21.0,
+            "status": "OK",
+            "projected_stockout_date": null
+          }
+        ],
+        "summary": "SKU-1042 @ SITE-PUN-03: 21.0 days cover (Status: OK)"
+      },
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "evidence_id": "EV-INV-001",
+          "source_type": "DATABASE",
+          "citation": "inventory table (SKU-1042 @ SITE-PUN-03)",
+          "snippet": "on_hand=2100, safety_stock=500, demand=100.0/day, in_transit=0"
+        }
+      ],
+      "created_at": "2026-11-15T12:46:10.236496",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0005",
+      "type": "SUPPLIER_OPTIONS",
+      "author": "supplier",
+      "payload": {
+        "options": [
+          {
+            "supplier_id": "SUP-001",
+            "supplier_name": "Apex Micro Systems",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1450.0,
+            "moq": 500,
+            "lead_time_days": 12,
+            "capacity": 5000,
+            "reliability_score": 0.92,
+            "contract_ref": "CTR-SUP001-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-012",
+            "supplier_name": "Zenith Fastline Electronics",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1680.0,
+            "moq": 200,
+            "lead_time_days": 4,
+            "capacity": 2000,
+            "reliability_score": 0.94,
+            "contract_ref": "CTR-SUP012-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-004",
+            "supplier_name": "Silicon Craft Technologies",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1520.0,
+            "moq": 300,
+            "lead_time_days": 5,
+            "capacity": 3000,
+            "reliability_score": 0.96,
+            "contract_ref": "CTR-SUP004-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-009",
+            "supplier_name": "QuickSource Components",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1150.0,
+            "moq": 1000,
+            "lead_time_days": 14,
+            "capacity": 10000,
+            "reliability_score": 0.72,
+            "contract_ref": "CTR-SUP009-2025",
+            "qualified": false,
+            "disqualification_reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause"
+          }
+        ],
+        "summary": "Evaluated 4 supplier options across 1 SKUs."
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-0001",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 1: Scope & Products",
+          "snippet": "### Section 1: Scope & Products\nApex Micro Systems is designated as the Primary Tier-1 Supplier for Industrial Microcontroller Units (SKU-1042, SKU-1001) to ResilienceHub manufacturing facilities including the Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02)."
+        },
+        {
+          "evidence_id": "EV-0002",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 3: Force Majeure & Disruption Protocols",
+          "snippet": "### Section 3: Force Majeure & Disruption Protocols\nIn the event of manufacturing line stoppages, component shortages, or wafer fabrication delays exceeding 7 calendar days:\n- The Supplier must provide written notification within 24 hours of identifying the delay.\n- ResilienceHub"
+        },
+        {
+          "evidence_id": "EV-0003",
+          "source_type": "RAG",
+          "citation": "CTR-SUP012-2025 \u00a7 Section 1: Rapid Dispatch Services",
+          "snippet": "### Section 1: Rapid Dispatch Services\nZenith Fastline Electronics provides express spot inventory for critical electronic microcontrollers (SKU-1042) and power management ICs. Units are pre-inspected and stocked at Bengaluru Domestic Airport Bonded Warehouse."
+        },
+        {
+          "evidence_id": "EV-0004",
+          "source_type": "RAG",
+          "citation": "CTR-SUP012-2025 \u00a7 Emergency Buffer Supply Agreement: Zenith Fastline Electronics (SUP-012)",
+          "snippet": "# Emergency Buffer Supply Agreement: Zenith Fastline Electronics (SUP-012)"
+        },
+        {
+          "evidence_id": "EV-0005",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 2: Lead Times and MOQ",
+          "snippet": "### Section 2: Lead Times and MOQ\n- SKU-1042: Contract price INR 1,520 per unit. Standard lead time is 5 business days.\n- SKU-1001: Contract price INR 680 per unit. Standard lead time is 6 business days.\n- SKU-1002: Contract price INR 295 per unit. Standard lead time is 5 busines"
+        },
+        {
+          "evidence_id": "EV-0006",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 3: Priority Dispatch & Emergency Surcharges",
+          "snippet": "### Section 3: Priority Dispatch & Emergency Surcharges\n- Expedited 3-day turnaround is guaranteed upon payment of an emergency handling surcharge of INR 25,000 per order.\n- Freight is coordinated via dedicated express road freight (LANE-BLR-CHN-RD) or air cargo."
+        },
+        {
+          "evidence_id": "EV-0007",
+          "source_type": "RAG",
+          "citation": "CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause",
+          "snippet": "### Section 4.2: Exclusivity and Qualification Disqualification Clause\nUnder ResilienceHub Quality Policy clause 4.2 and Customer OEM Exclusivity Agreements, uncertified grey-market or unverified spot-market suppliers cannot supply critical SOCs (including SKU-1042) for Tier-1 au"
+        },
+        {
+          "evidence_id": "EV-0008",
+          "source_type": "RAG",
+          "citation": "CTR-SUP009-2025 \u00a7 Section 2: Pricing and Minimum Order",
+          "snippet": "### Section 2: Pricing and Minimum Order\n- SKU-1042: Quoted price INR 1,150 per unit. MOQ: 1,000 units.\n- Standard lead time: 14 business days via regular maritime/air consolidation."
+        }
+      ],
+      "created_at": "2026-11-15T12:46:10.261423",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
+      "type": "ROUTE_OPTIONS",
+      "author": "route",
+      "payload": {
+        "options": [
+          {
+            "route_id": "LANE-CHN-PUN-RD",
+            "origin": "SITE-CHN-01",
+            "dest": "SITE-PUN-03",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 3,
+            "freight_cost_per_unit_inr": 35.0,
+            "capacity_units": 15000,
+            "risk_rating": "LOW",
+            "carrier": "VRL Logistics",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-CHN-PUN-RL",
+            "origin": "SITE-CHN-01",
+            "dest": "SITE-PUN-03",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 22.0,
+            "capacity_units": 30000,
+            "risk_rating": "LOW",
+            "carrier": "Container Corp of India (CONCOR)",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-MUM-PUN-RD",
+            "origin": "SITE-MUM-07",
+            "dest": "SITE-PUN-03",
+            "mode": "ROAD",
+            "added_delay_days": 5,
+            "transit_days": 6,
+            "freight_cost_per_unit_inr": 18.0,
+            "capacity_units": 20000,
+            "risk_rating": "BLOCKED",
+            "carrier": "Gati KWE",
+            "advisory_ref": "ADV-MUM-PUN-01 \u00a7 1. Incident Overview"
+          },
+          {
+            "route_id": "LANE-MUM-PUN-RL",
+            "origin": "SITE-MUM-07",
+            "dest": "SITE-PUN-03",
+            "mode": "RAIL",
+            "added_delay_days": 2,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 14.0,
+            "capacity_units": 35000,
+            "risk_rating": "LOW",
+            "carrier": "Central Railway Cargo",
+            "advisory_ref": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors"
+          }
+        ],
+        "summary": "Identified 4 route options across connected logistics corridors."
+      },
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "evidence_id": "EV-0009",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
+          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
+        },
+        {
+          "evidence_id": "EV-0010",
+          "source_type": "RAG",
+          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
+          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
+        },
+        {
+          "evidence_id": "EV-0011",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
+          "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
+        }
+      ],
+      "created_at": "2026-11-15T12:46:10.264871",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0007",
+      "type": "COST_ESTIMATES",
+      "author": "cost",
+      "payload": {
+        "estimates": [
+          {
+            "option_id": "REORDER-SUP-001",
+            "action_type": "REORDER",
+            "target_entity": "SUP-001",
+            "purchase_cost_inr": 1740000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 11484.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 1793484.0,
+            "arrival_days": 12,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 500) at INR 1450.00/unit",
+              "Holding cost for 12 days lead time: INR 11484.00"
+            ]
+          },
+          {
+            "option_id": "REORDER-SUP-012",
+            "action_type": "REORDER",
+            "target_entity": "SUP-012",
+            "purchase_cost_inr": 2016000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 4435.2,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 2062435.2,
+            "arrival_days": 4,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 200) at INR 1680.00/unit",
+              "Holding cost for 4 days lead time: INR 4435.20"
+            ]
+          },
+          {
+            "option_id": "REORDER-SUP-004",
+            "action_type": "REORDER",
+            "target_entity": "SUP-004",
+            "purchase_cost_inr": 1824000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 5016.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 1871016.0,
+            "arrival_days": 5,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 300) at INR 1520.00/unit",
+              "Holding cost for 5 days lead time: INR 5016.00"
+            ]
+          },
+          {
+            "option_id": "REORDER-SUP-009",
+            "action_type": "REORDER",
+            "target_entity": "SUP-009",
+            "purchase_cost_inr": 1380000.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 10626.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 1432626.0,
+            "arrival_days": 14,
+            "is_viable": false,
+            "non_viability_reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause",
+            "assumptions": [
+              "Order quantity: 1200 (MOQ: 1000) at INR 1150.00/unit",
+              "Holding cost for 14 days lead time: INR 10626.00"
+            ]
+          },
+          {
+            "option_id": "REROUTE-LANE-CHN-PUN-RD",
+            "action_type": "REROUTE",
+            "target_entity": "LANE-CHN-PUN-RD",
+            "purchase_cost_inr": 0.0,
+            "freight_cost_inr": 42000.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 0.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 42000.0,
+            "arrival_days": 3,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Freight cost on alternative route LANE-CHN-PUN-RD: INR 42000.00",
+              "Delay holding cost for 0 days: INR 0.00"
+            ]
+          },
+          {
+            "option_id": "REROUTE-LANE-CHN-PUN-RL",
+            "action_type": "REROUTE",
+            "target_entity": "LANE-CHN-PUN-RL",
+            "purchase_cost_inr": 0.0,
+            "freight_cost_inr": 26400.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 0.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 26400.0,
+            "arrival_days": 4,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Freight cost on alternative route LANE-CHN-PUN-RL: INR 26400.00",
+              "Delay holding cost for 0 days: INR 0.00"
+            ]
+          },
+          {
+            "option_id": "REROUTE-LANE-MUM-PUN-RD",
+            "action_type": "REROUTE",
+            "target_entity": "LANE-MUM-PUN-RD",
+            "purchase_cost_inr": 0.0,
+            "freight_cost_inr": 21600.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 4785.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 26385.0,
+            "arrival_days": 6,
+            "is_viable": false,
+            "non_viability_reason": "Route corridor LANE-MUM-PUN-RD is blocked by rockslide/incident",
+            "assumptions": [
+              "Freight cost on alternative route LANE-MUM-PUN-RD: INR 21600.00",
+              "Delay holding cost for 5 days: INR 4785.00"
+            ]
+          },
+          {
+            "option_id": "REROUTE-LANE-MUM-PUN-RL",
+            "action_type": "REROUTE",
+            "target_entity": "LANE-MUM-PUN-RL",
+            "purchase_cost_inr": 0.0,
+            "freight_cost_inr": 16800.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 1914.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 18714.0,
+            "arrival_days": 4,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Freight cost on alternative route LANE-MUM-PUN-RL: INR 16800.00",
+              "Delay holding cost for 2 days: INR 1914.00"
+            ]
+          },
+          {
+            "option_id": "HOLD",
+            "action_type": "HOLD",
+            "target_entity": "HOLD",
+            "purchase_cost_inr": 0.0,
+            "freight_cost_inr": 0.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 2871.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 2871.0,
+            "arrival_days": 3,
+            "is_viable": false,
+            "non_viability_reason": "Physical corridor is blocked; rerouting required",
+            "assumptions": [
+              "Buffer holding cost while waiting 3 days: INR 2871.00"
+            ]
+          }
+        ],
+        "methodology": "Total cost model integrating purchase, freight, expedite fees, transit holding, and stockout risk penalty."
+      },
+      "confidence": 0.96,
+      "evidence": [
+        {
+          "evidence_id": "EV-COST-001",
+          "source_type": "RULE",
+          "citation": "SCDRC Enterprise Cost Model",
+          "snippet": "Evaluated 9 options for SKU SKU-1042 at unit base INR 1450.00"
+        }
+      ],
+      "created_at": "2026-11-15T12:46:10.267055",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0008",
+      "type": "DECISION",
+      "author": "coordinator",
+      "payload": {
+        "action": "REROUTE",
+        "chosen_option_id": "LANE-MUM-PUN-RL",
+        "total_cost_inr": 18714.0,
+        "rationale": "All alternative options are non-viable or blocked. Escalating to human supervision per cited entries: E-2026, E-0004, E-0005, E-0006.",
+        "cited_entry_ids": [
+          "E-0004",
+          "E-0005",
+          "E-0006",
+          "E-0007"
+        ],
+        "rejected_options": [
+          {
+            "option": "REORDER-SUP-009",
+            "reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause"
+          },
+          {
+            "option": "REROUTE-LANE-MUM-PUN-RD",
+            "reason": "Route corridor LANE-MUM-PUN-RD is blocked by rockslide/incident"
+          },
+          {
+            "option": "HOLD",
+            "reason": "Physical corridor is blocked; rerouting required"
+          },
+          {
+            "option": "REROUTE-LANE-CHN-PUN-RL",
+            "reason": "Viable but higher total landed cost (INR 26,400.00) vs chosen option (INR 18,714.00)"
+          },
+          {
+            "option": "REROUTE-LANE-CHN-PUN-RD",
+            "reason": "Viable but higher total landed cost (INR 42,000.00) vs chosen option (INR 18,714.00)"
+          },
+          {
+            "option": "REORDER-SUP-001",
+            "reason": "Viable but higher total landed cost (INR 1,793,484.00) vs chosen option (INR 18,714.00)"
+          },
+          {
+            "option": "REORDER-SUP-004",
+            "reason": "Viable but higher total landed cost (INR 1,871,016.00) vs chosen option (INR 18,714.00)"
+          },
+          {
+            "option": "REORDER-SUP-012",
+            "reason": "Viable but higher total landed cost (INR 2,062,435.20) vs chosen option (INR 18,714.00)"
+          }
+        ],
+        "confidence": 0.9,
+        "notify_list": []
+      },
+      "confidence": 0.9,
+      "evidence": [],
+      "created_at": "2026-11-15T12:46:10.268133",
+      "version": 1,
+      "supersedes": null
+    }
+  ],
+  "status": "DECIDED",
+  "audit_log": [
+    {
+      "event_id": "AUD-0001",
+      "event_type": "CASE_INITIALIZED",
+      "agent": "orchestrator",
+      "details": "Case CASE-20261115-124610 initialized with report: DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PU...",
+      "timestamp": "2026-11-15T12:46:10.229817"
+    },
+    {
+      "event_id": "AUD-0002",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
+      "timestamp": "2026-11-15T12:46:10.229839"
+    },
+    {
+      "event_id": "AUD-0003",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
+      "timestamp": "2026-11-15T12:46:10.229848"
+    },
+    {
+      "event_id": "AUD-0004",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.95",
+      "timestamp": "2026-11-15T12:46:10.232191"
+    },
+    {
+      "event_id": "AUD-0005",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.95",
+      "timestamp": "2026-11-15T12:46:10.232230"
+    },
+    {
+      "event_id": "AUD-0006",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.95",
+      "timestamp": "2026-11-15T12:46:10.232254"
+    },
+    {
+      "event_id": "AUD-0007",
+      "event_type": "ENTRY_POSTED",
+      "agent": "inventory",
+      "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
+      "timestamp": "2026-11-15T12:46:10.236526"
+    },
+    {
+      "event_id": "AUD-0008",
+      "event_type": "ENTRY_POSTED",
+      "agent": "supplier",
+      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T12:46:10.261443"
+    },
+    {
+      "event_id": "AUD-0009",
+      "event_type": "ENTRY_POSTED",
+      "agent": "route",
+      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T12:46:10.264889"
+    },
+    {
+      "event_id": "AUD-0010",
+      "event_type": "ENTRY_POSTED",
+      "agent": "cost",
+      "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
+      "timestamp": "2026-11-15T12:46:10.267071"
+    },
+    {
+      "event_id": "AUD-0011",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
+      "timestamp": "2026-11-15T12:46:10.267104"
+    },
+    {
+      "event_id": "AUD-0012",
+      "event_type": "ENTRY_POSTED",
+      "agent": "coordinator",
+      "details": "Posted E-0008 (DECISION) with confidence 0.90",
+      "timestamp": "2026-11-15T12:46:10.268147"
+    },
+    {
+      "event_id": "AUD-0013",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from READY to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T12:46:10.268180"
+    }
+  ],
+  "created_at": "2026-11-15T12:46:10.278924"
+}

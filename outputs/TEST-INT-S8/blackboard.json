@@ -1,0 +1,461 @@
+{
+  "case_id": "TEST-INT-S8",
+  "report": {
+    "report_id": "REP-TEST-INT-S8",
+    "text": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week.",
+    "reported_at": "2026-11-15T12:50:53.554656",
+    "source": "MANUAL"
+  },
+  "entries": [
+    {
+      "entry_id": "E-0001",
+      "type": "DISRUPTION_PROFILE",
+      "author": "monitor",
+      "payload": {
+        "disruption_type": "UNKNOWN",
+        "severity": 2,
+        "start_date": null,
+        "expected_duration_days": 0,
+        "source_text": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week.",
+        "root_cause": "Ambiguous report with no verified SKU or facility"
+      },
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week."
+        }
+      ],
+      "created_at": "2026-11-15T12:50:53.556447",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0002",
+      "type": "AFFECTED_ITEMS",
+      "author": "monitor",
+      "payload": {
+        "items": [],
+        "unresolved_tokens": [
+          "southern logistics corridor",
+          "rumor"
+        ]
+      },
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week."
+        }
+      ],
+      "created_at": "2026-11-15T12:50:53.556479",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0003",
+      "type": "AFFECTED_SITES",
+      "author": "monitor",
+      "payload": {
+        "sites": [],
+        "unresolved_tokens": [
+          "southern logistics corridor",
+          "rumor"
+        ]
+      },
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "evidence_id": "EV-MON-001",
+          "source_type": "MANUAL",
+          "citation": "Disruption Report Raw Ingestion",
+          "snippet": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week."
+        }
+      ],
+      "created_at": "2026-11-15T12:50:53.556497",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0004",
+      "type": "INVENTORY_STATUS",
+      "author": "inventory",
+      "payload": {
+        "inventory": [],
+        "summary": "No inventory records located for affected items."
+      },
+      "confidence": 0.98,
+      "evidence": [],
+      "created_at": "2026-11-15T12:50:53.556655",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0005",
+      "type": "SUPPLIER_OPTIONS",
+      "author": "supplier",
+      "payload": {
+        "options": [],
+        "summary": "Evaluated 0 supplier options across 0 SKUs."
+      },
+      "confidence": 0.95,
+      "evidence": [],
+      "created_at": "2026-11-15T12:50:53.556697",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
+      "type": "ROUTE_OPTIONS",
+      "author": "route",
+      "payload": {
+        "options": [
+          {
+            "route_id": "LANE-BLR-CHN-RD",
+            "origin": "SITE-BLR-02",
+            "dest": "SITE-CHN-01",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 1,
+            "freight_cost_per_unit_inr": 20.0,
+            "capacity_units": 25000,
+            "risk_rating": "LOW",
+            "carrier": "VRL Logistics",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-BLR-CHN-RL",
+            "origin": "SITE-BLR-02",
+            "dest": "SITE-CHN-01",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 15.0,
+            "capacity_units": 40000,
+            "risk_rating": "LOW",
+            "carrier": "Southern Railway Freight",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-SIN-CHN-SE",
+            "origin": "SITE-SIN-08",
+            "dest": "SITE-CHN-01",
+            "mode": "SEA",
+            "added_delay_days": 0,
+            "transit_days": 8,
+            "freight_cost_per_unit_inr": 45.0,
+            "capacity_units": 50000,
+            "risk_rating": "MEDIUM",
+            "carrier": "Maersk Line",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-SIN-CHN-AR",
+            "origin": "SITE-SIN-08",
+            "dest": "SITE-CHN-01",
+            "mode": "AIR",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 350.0,
+            "capacity_units": 4000,
+            "risk_rating": "LOW",
+            "carrier": "Singapore Airlines Cargo",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-KOL-CHN-RD",
+            "origin": "SITE-KOL-06",
+            "dest": "SITE-CHN-01",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 52.0,
+            "capacity_units": 10000,
+            "risk_rating": "MEDIUM",
+            "carrier": "Safechem Logistics",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-KOL-CHN-RL",
+            "origin": "SITE-KOL-06",
+            "dest": "SITE-CHN-01",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 38.0,
+            "capacity_units": 20000,
+            "risk_rating": "LOW",
+            "carrier": "CONCOR",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-HYD-CHN-RD",
+            "origin": "SITE-HYD-05",
+            "dest": "SITE-CHN-01",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 28.0,
+            "capacity_units": 18000,
+            "risk_rating": "LOW",
+            "carrier": "TCI Freight",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-HYD-CHN-RL",
+            "origin": "SITE-HYD-05",
+            "dest": "SITE-CHN-01",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 20.0,
+            "capacity_units": 25000,
+            "risk_rating": "LOW",
+            "carrier": "South Central Railway",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-CHN-PUN-RD",
+            "origin": "SITE-CHN-01",
+            "dest": "SITE-PUN-03",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 3,
+            "freight_cost_per_unit_inr": 35.0,
+            "capacity_units": 15000,
+            "risk_rating": "LOW",
+            "carrier": "VRL Logistics",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-CHN-PUN-RL",
+            "origin": "SITE-CHN-01",
+            "dest": "SITE-PUN-03",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 22.0,
+            "capacity_units": 30000,
+            "risk_rating": "LOW",
+            "carrier": "Container Corp of India (CONCOR)",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-MUM-PUN-RD",
+            "origin": "SITE-MUM-07",
+            "dest": "SITE-PUN-03",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 1,
+            "freight_cost_per_unit_inr": 18.0,
+            "capacity_units": 20000,
+            "risk_rating": "HIGH",
+            "carrier": "Gati KWE",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-MUM-PUN-RL",
+            "origin": "SITE-MUM-07",
+            "dest": "SITE-PUN-03",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 14.0,
+            "capacity_units": 35000,
+            "risk_rating": "LOW",
+            "carrier": "Central Railway Cargo",
+            "advisory_ref": null
+          }
+        ],
+        "summary": "Identified 12 route options across connected logistics corridors."
+      },
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "evidence_id": "EV-0001",
+          "source_type": "RAG",
+          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
+          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
+        },
+        {
+          "evidence_id": "EV-0002",
+          "source_type": "RAG",
+          "citation": "ADV-MUM-PUN-01 \u00a7 1. Incident Overview",
+          "snippet": "### 1. Incident Overview\nHeavy monsoon rainfall has caused rockslides across the Khandala Ghat stretch of the Mumbai-Pune Expressway. Heavy commercial vehicle movement along road corridor `LANE-MUM-PUN-RD` is halted for an estimated 48 to 72 hours."
+        },
+        {
+          "evidence_id": "EV-0003",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
+          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
+        }
+      ],
+      "created_at": "2026-11-15T12:50:53.559456",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0007",
+      "type": "COST_ESTIMATES",
+      "author": "cost",
+      "payload": {
+        "estimates": [
+          {
+            "option_id": "HOLD",
+            "action_type": "HOLD",
+            "target_entity": "HOLD",
+            "purchase_cost_inr": 0.0,
+            "freight_cost_inr": 0.0,
+            "expedite_fee_inr": 0.0,
+            "holding_cost_inr": 0.0,
+            "stockout_penalty_inr": 0.0,
+            "total_cost_inr": 0.0,
+            "arrival_days": 0,
+            "is_viable": true,
+            "non_viability_reason": null,
+            "assumptions": [
+              "Buffer holding cost while waiting 0 days: INR 0.00"
+            ]
+          }
+        ],
+        "methodology": "Total cost model integrating purchase, freight, expedite fees, transit holding, and stockout risk penalty."
+      },
+      "confidence": 0.96,
+      "evidence": [
+        {
+          "evidence_id": "EV-COST-001",
+          "source_type": "RULE",
+          "citation": "SCDRC Enterprise Cost Model",
+          "snippet": "Evaluated 1 options for SKU SKU-1042 at unit base INR 1450.00"
+        }
+      ],
+      "created_at": "2026-11-15T12:50:53.561236",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0008",
+      "type": "DECISION",
+      "author": "coordinator",
+      "payload": {
+        "action": "HOLD",
+        "chosen_option_id": "HOLD",
+        "total_cost_inr": 0.0,
+        "rationale": "Report is ambiguous with unresolved entities (southern logistics corridor, rumor). Holding action pending manual intelligence verification per E-0002.",
+        "cited_entry_ids": [
+          "E-0004",
+          "E-0005",
+          "E-0006",
+          "E-0007"
+        ],
+        "rejected_options": [],
+        "confidence": 0.5,
+        "notify_list": []
+      },
+      "confidence": 0.5,
+      "evidence": [],
+      "created_at": "2026-11-15T12:50:53.561669",
+      "version": 1,
+      "supersedes": null
+    }
+  ],
+  "status": "DECIDED",
+  "audit_log": [
+    {
+      "event_id": "AUD-0001",
+      "event_type": "CASE_INITIALIZED",
+      "agent": "orchestrator",
+      "details": "Case TEST-INT-S8 initialized with report: Vague rumor: Heard there are big shipment problems somewhere in the southern log...",
+      "timestamp": "2026-11-15T12:50:53.554681"
+    },
+    {
+      "event_id": "AUD-0002",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
+      "timestamp": "2026-11-15T12:50:53.554695"
+    },
+    {
+      "event_id": "AUD-0003",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
+      "timestamp": "2026-11-15T12:50:53.554701"
+    },
+    {
+      "event_id": "AUD-0004",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.40",
+      "timestamp": "2026-11-15T12:50:53.556464"
+    },
+    {
+      "event_id": "AUD-0005",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.40",
+      "timestamp": "2026-11-15T12:50:53.556486"
+    },
+    {
+      "event_id": "AUD-0006",
+      "event_type": "ENTRY_POSTED",
+      "agent": "monitor",
+      "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.40",
+      "timestamp": "2026-11-15T12:50:53.556502"
+    },
+    {
+      "event_id": "AUD-0007",
+      "event_type": "ENTRY_POSTED",
+      "agent": "inventory",
+      "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
+      "timestamp": "2026-11-15T12:50:53.556663"
+    },
+    {
+      "event_id": "AUD-0008",
+      "event_type": "ENTRY_POSTED",
+      "agent": "supplier",
+      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T12:50:53.556702"
+    },
+    {
+      "event_id": "AUD-0009",
+      "event_type": "ENTRY_POSTED",
+      "agent": "route",
+      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T12:50:53.559473"
+    },
+    {
+      "event_id": "AUD-0010",
+      "event_type": "ENTRY_POSTED",
+      "agent": "cost",
+      "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
+      "timestamp": "2026-11-15T12:50:53.561250"
+    },
+    {
+      "event_id": "AUD-0011",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
+      "timestamp": "2026-11-15T12:50:53.561275"
+    },
+    {
+      "event_id": "AUD-0012",
+      "event_type": "ENTRY_POSTED",
+      "agent": "coordinator",
+      "details": "Posted E-0008 (DECISION) with confidence 0.50",
+      "timestamp": "2026-11-15T12:50:53.561680"
+    },
+    {
+      "event_id": "AUD-0013",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from READY to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T12:50:53.561702"
+    }
+  ],
+  "created_at": "2026-11-15T12:50:53.565480"
+}

@@ -1,0 +1,108 @@
+{
+  "case_id": "TEST-INT-S7",
+  "total_spans": 6,
+  "total_duration_seconds": 0.017,
+  "total_tokens": 600,
+  "spans": [
+    {
+      "span_id": "SPAN-001",
+      "case_id": "TEST-INT-S7",
+      "agent_name": "monitor",
+      "start_time": "2026-11-15T12:50:53.514819",
+      "end_time": "2026-11-15T12:50:53.516810",
+      "duration_seconds": 0.001991,
+      "status": "SUCCESS",
+      "prompt_tokens": 292,
+      "completion_tokens": 120,
+      "total_tokens": 200,
+      "tool_calls": [
+        "lookup_item",
+        "lookup_site"
+      ],
+      "error_message": null
+    },
+    {
+      "span_id": "SPAN-002",
+      "case_id": "TEST-INT-S7",
+      "agent_name": "inventory",
+      "start_time": "2026-11-15T12:50:53.516952",
+      "end_time": "2026-11-15T12:50:53.518229",
+      "duration_seconds": 0.001277,
+      "status": "SUCCESS",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "tool_calls": [
+        "get_inventory(SKU-1042, SITE-SIN-08)",
+        "get_in_transit(SKU-1042, SITE-SIN-08)"
+      ],
+      "error_message": null
+    },
+    {
+      "span_id": "SPAN-003",
+      "case_id": "TEST-INT-S7",
+      "agent_name": "supplier",
+      "start_time": "2026-11-15T12:50:53.518252",
+      "end_time": "2026-11-15T12:50:53.526579",
+      "duration_seconds": 0.008327,
+      "status": "SUCCESS",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "tool_calls": [
+        "find_suppliers_for_sku(SKU-1042)"
+      ],
+      "error_message": null
+    },
+    {
+      "span_id": "SPAN-004",
+      "case_id": "TEST-INT-S7",
+      "agent_name": "route",
+      "start_time": "2026-11-15T12:50:53.526616",
+      "end_time": "2026-11-15T12:50:53.529250",
+      "duration_seconds": 0.002634,
+      "status": "SUCCESS",
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "tool_calls": [
+        "find_routes_to_site(SITE-SIN-08)"
+      ],
+      "error_message": null
+    },
+    {
+      "span_id": "SPAN-005",
+      "case_id": "TEST-INT-S7",
+      "agent_name": "cost",
+      "start_time": "2026-11-15T12:50:53.529322",
+      "end_time": "2026-11-15T12:50:53.530814",
+      "duration_seconds": 0.001492,
+      "status": "SUCCESS",
+      "prompt_tokens": 191,
+      "completion_tokens": 120,
+      "total_tokens": 200,
+      "tool_calls": [
+        "calculate_reorder_cost",
+        "calculate_reroute_cost"
+      ],
+      "error_message": null
+    },
+    {
+      "span_id": "SPAN-006",
+      "case_id": "TEST-INT-S7",
+      "agent_name": "coordinator",
+      "start_time": "2026-11-15T12:50:53.530847",
+      "end_time": "2026-11-15T12:50:53.531270",
+      "duration_seconds": 0.001,
+      "status": "SUCCESS",
+      "prompt_tokens": 342,
+      "completion_tokens": 120,
+      "total_tokens": 200,
+      "tool_calls": [
+        "list_entries",
+        "get_entry"
+      ],
+      "error_message": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+rules:
+  REORDER:
+    always:
+      - role: "Procurement Manager"
+        channel: "email"
+        urgency: "high"
+      - role: "Supplier Account Rep"
+        channel: "email"
+        urgency: "high"
+    conditional:
+      - role: "Finance Controller"
+        condition: "cost_exceeds_threshold"
+        threshold_inr: 1500000
+        channel: "email"
+        urgency: "medium"
+      - role: "Plant Manager"
+        condition: "has_stockout_risk"
+        channel: "sms"
+        urgency: "critical"
+
+  REROUTE:
+    always:
+      - role: "Logistics Manager"
+        channel: "email"
+        urgency: "high"
+      - role: "Carrier Dispatcher"
+        channel: "email"
+        urgency: "high"
+    conditional:
+      - role: "Site Manager"
+        condition: "site_affected"
+        channel: "sms"
+        urgency: "medium"
+      - role: "Customer Service Lead"
+        condition: "delivery_delayed"
+        channel: "email"
+        urgency: "medium"
+
+  HOLD:
+    always:
+      - role: "Supply Chain Planner"
+        channel: "email"
+        urgency: "medium"
+    conditional:
+      - role: "Escalation Director"
+        condition: "no_viable_option"
+        channel: "sms"
+        urgency: "critical"
+      - role: "Plant Manager"
+        condition: "cover_below_critical"
+        critical_days: 3
+        channel: "sms"
+        urgency: "high"
