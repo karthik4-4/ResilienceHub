@@ -3,7 +3,7 @@
   "report": {
     "report_id": "REP-TEST-INT-S2",
     "text": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Severity: 3.",
-    "reported_at": "2026-11-15T12:50:53.272873",
+    "reported_at": "2026-11-15T13:39:55.186203",
     "source": "MANUAL"
   },
   "entries": [
@@ -28,7 +28,7 @@
           "snippet": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Sever"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.275106",
+      "created_at": "2026-11-15T13:39:55.212479",
       "version": 1,
       "supersedes": null
     },
@@ -56,7 +56,7 @@
           "snippet": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Sever"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.275149",
+      "created_at": "2026-11-15T13:39:55.212740",
       "version": 1,
       "supersedes": null
     },
@@ -84,7 +84,7 @@
           "snippet": "DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PUN-RD. Transit for incoming shipments to Pune Central Distribution Center (SITE-PUN-03) is blocked for 48-72 hours. Sever"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.275172",
+      "created_at": "2026-11-15T13:39:55.212870",
       "version": 1,
       "supersedes": null
     },
@@ -117,12 +117,98 @@
           "snippet": "on_hand=2100, safety_stock=500, demand=100.0/day, in_transit=0"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.276764",
+      "created_at": "2026-11-15T13:39:55.238999",
       "version": 1,
       "supersedes": null
     },
     {
       "entry_id": "E-0005",
+      "type": "ROUTE_OPTIONS",
+      "author": "route",
+      "payload": {
+        "options": [
+          {
+            "route_id": "LANE-CHN-PUN-RD",
+            "origin": "SITE-CHN-01",
+            "dest": "SITE-PUN-03",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 3,
+            "freight_cost_per_unit_inr": 35.0,
+            "capacity_units": 15000,
+            "risk_rating": "LOW",
+            "carrier": "VRL Logistics",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-CHN-PUN-RL",
+            "origin": "SITE-CHN-01",
+            "dest": "SITE-PUN-03",
+            "mode": "RAIL",
+            "added_delay_days": 0,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 22.0,
+            "capacity_units": 30000,
+            "risk_rating": "LOW",
+            "carrier": "Container Corp of India (CONCOR)",
+            "advisory_ref": null
+          },
+          {
+            "route_id": "LANE-MUM-PUN-RD",
+            "origin": "SITE-MUM-07",
+            "dest": "SITE-PUN-03",
+            "mode": "ROAD",
+            "added_delay_days": 5,
+            "transit_days": 6,
+            "freight_cost_per_unit_inr": 18.0,
+            "capacity_units": 20000,
+            "risk_rating": "BLOCKED",
+            "carrier": "Gati KWE",
+            "advisory_ref": "ADV-MUM-PUN-01 \u00a7 1. Incident Overview"
+          },
+          {
+            "route_id": "LANE-MUM-PUN-RL",
+            "origin": "SITE-MUM-07",
+            "dest": "SITE-PUN-03",
+            "mode": "RAIL",
+            "added_delay_days": 2,
+            "transit_days": 4,
+            "freight_cost_per_unit_inr": 14.0,
+            "capacity_units": 35000,
+            "risk_rating": "LOW",
+            "carrier": "Central Railway Cargo",
+            "advisory_ref": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors"
+          }
+        ],
+        "summary": "Identified 4 route options across connected logistics corridors."
+      },
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "evidence_id": "EV-0001",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
+          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
+        },
+        {
+          "evidence_id": "EV-0002",
+          "source_type": "RAG",
+          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
+          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
+        },
+        {
+          "evidence_id": "EV-0003",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
+          "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
+        }
+      ],
+      "created_at": "2026-11-15T13:39:55.319575",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
       "type": "SUPPLIER_OPTIONS",
       "author": "supplier",
       "payload": {
@@ -187,20 +273,20 @@
         {
           "evidence_id": "EV-0001",
           "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 3: Force Majeure & Disruption Protocols",
-          "snippet": "### Section 3: Force Majeure & Disruption Protocols\nIn the event of manufacturing line stoppages, component shortages, or wafer fabrication delays exceeding 7 calendar days:\n- The Supplier must provide written notification within 24 hours of identifying the delay.\n- ResilienceHub"
+          "citation": "CTR-SUP001-2025 \u00a7 Section 4: Expedited Production",
+          "snippet": "### Section 4: Expedited Production\nExpedited batch delivery can reduce lead time to 7 business days subject to a standard expedite fee of INR 35,000 plus 10% unit price surcharge. Maximum monthly expedited allocation is 2,500 units."
         },
         {
           "evidence_id": "EV-0002",
           "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 2: Pricing and Standard Lead Times",
-          "snippet": "### Section 2: Pricing and Standard Lead Times\n- SKU-1042: Base Contract Price INR 1,450 per unit. Standard delivery lead time is 12 business days from purchase order confirmation.\n- SKU-1001: Base Contract Price INR 650 per unit. Standard delivery lead time is 10 business days."
+          "citation": "CTR-SUP001-2025 \u00a7 Section 1: Scope & Products",
+          "snippet": "### Section 1: Scope & Products\nApex Micro Systems is designated as the Primary Tier-1 Supplier for Industrial Microcontroller Units (SKU-1042, SKU-1001) to ResilienceHub manufacturing facilities including the Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02)."
         },
         {
           "evidence_id": "EV-0003",
           "source_type": "RAG",
-          "citation": "CTR-SUP012-2025 \u00a7 Section 2: Terms and Pricing",
-          "snippet": "### Section 2: Terms and Pricing\n- SKU-1042: Express unit price INR 1,680 per unit. MOQ: 200 units.\n- Standard lead time: 4 business days. Expedite lead time: 2 business days via chartered cargo.\n- Fixed expedite handling charge: INR 45,000 per order."
+          "citation": "CTR-SUP012-2025 \u00a7 Section 1: Rapid Dispatch Services",
+          "snippet": "### Section 1: Rapid Dispatch Services\nZenith Fastline Electronics provides express spot inventory for critical electronic microcontrollers (SKU-1042) and power management ICs. Units are pre-inspected and stocked at Bengaluru Domestic Airport Bonded Warehouse."
         },
         {
           "evidence_id": "EV-0004",
@@ -217,8 +303,8 @@
         {
           "evidence_id": "EV-0006",
           "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 3: Priority Dispatch & Emergency Surcharges",
-          "snippet": "### Section 3: Priority Dispatch & Emergency Surcharges\n- Expedited 3-day turnaround is guaranteed upon payment of an emergency handling surcharge of INR 25,000 per order.\n- Freight is coordinated via dedicated express road freight (LANE-BLR-CHN-RD) or air cargo."
+          "citation": "CTR-SUP004-2025 \u00a7 Section 4: Mutual Non-Exclusivity",
+          "snippet": "### Section 4: Mutual Non-Exclusivity\nResilienceHub is free to place secondary and surge demand purchase orders without minimum annual commitment quotas, provided orders meet MOQ thresholds."
         },
         {
           "evidence_id": "EV-0007",
@@ -233,93 +319,7 @@
           "snippet": "### Section 4.2: Exclusivity and Qualification Disqualification Clause\nUnder ResilienceHub Quality Policy clause 4.2 and Customer OEM Exclusivity Agreements, uncertified grey-market or unverified spot-market suppliers cannot supply critical SOCs (including SKU-1042) for Tier-1 au"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.285273",
-      "version": 1,
-      "supersedes": null
-    },
-    {
-      "entry_id": "E-0006",
-      "type": "ROUTE_OPTIONS",
-      "author": "route",
-      "payload": {
-        "options": [
-          {
-            "route_id": "LANE-CHN-PUN-RD",
-            "origin": "SITE-CHN-01",
-            "dest": "SITE-PUN-03",
-            "mode": "ROAD",
-            "added_delay_days": 0,
-            "transit_days": 3,
-            "freight_cost_per_unit_inr": 35.0,
-            "capacity_units": 15000,
-            "risk_rating": "LOW",
-            "carrier": "VRL Logistics",
-            "advisory_ref": null
-          },
-          {
-            "route_id": "LANE-CHN-PUN-RL",
-            "origin": "SITE-CHN-01",
-            "dest": "SITE-PUN-03",
-            "mode": "RAIL",
-            "added_delay_days": 0,
-            "transit_days": 4,
-            "freight_cost_per_unit_inr": 22.0,
-            "capacity_units": 30000,
-            "risk_rating": "LOW",
-            "carrier": "Container Corp of India (CONCOR)",
-            "advisory_ref": null
-          },
-          {
-            "route_id": "LANE-MUM-PUN-RD",
-            "origin": "SITE-MUM-07",
-            "dest": "SITE-PUN-03",
-            "mode": "ROAD",
-            "added_delay_days": 5,
-            "transit_days": 6,
-            "freight_cost_per_unit_inr": 18.0,
-            "capacity_units": 20000,
-            "risk_rating": "BLOCKED",
-            "carrier": "Gati KWE",
-            "advisory_ref": "ADV-MUM-PUN-01 \u00a7 1. Incident Overview"
-          },
-          {
-            "route_id": "LANE-MUM-PUN-RL",
-            "origin": "SITE-MUM-07",
-            "dest": "SITE-PUN-03",
-            "mode": "RAIL",
-            "added_delay_days": 2,
-            "transit_days": 4,
-            "freight_cost_per_unit_inr": 14.0,
-            "capacity_units": 35000,
-            "risk_rating": "LOW",
-            "carrier": "Central Railway Cargo",
-            "advisory_ref": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors"
-          }
-        ],
-        "summary": "Identified 4 route options across connected logistics corridors."
-      },
-      "confidence": 0.94,
-      "evidence": [
-        {
-          "evidence_id": "EV-0009",
-          "source_type": "RAG",
-          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
-          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
-        },
-        {
-          "evidence_id": "EV-0010",
-          "source_type": "RAG",
-          "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
-          "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
-        },
-        {
-          "evidence_id": "EV-0011",
-          "source_type": "RAG",
-          "citation": "ADV-MUM-PUN-01 \u00a7 1. Incident Overview",
-          "snippet": "### 1. Incident Overview\nHeavy monsoon rainfall has caused rockslides across the Khandala Ghat stretch of the Mumbai-Pune Expressway. Heavy commercial vehicle movement along road corridor `LANE-MUM-PUN-RD` is halted for an estimated 48 to 72 hours."
-        }
-      ],
-      "created_at": "2026-11-15T12:50:53.287446",
+      "created_at": "2026-11-15T13:39:55.419004",
       "version": 1,
       "supersedes": null
     },
@@ -502,7 +502,7 @@
           "snippet": "Evaluated 9 options for SKU SKU-1042 at unit base INR 1450.00"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.289137",
+      "created_at": "2026-11-15T13:39:55.443110",
       "version": 1,
       "supersedes": null
     },
@@ -514,11 +514,11 @@
         "action": "REROUTE",
         "chosen_option_id": "LANE-MUM-PUN-RL",
         "total_cost_inr": 18714.0,
-        "rationale": "REROUTE option LANE-MUM-PUN-RL chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.",
+        "rationale": "REROUTE option LANE-MUM-PUN-RL chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0006, E-0005, E-0007.",
         "cited_entry_ids": [
           "E-0004",
-          "E-0005",
           "E-0006",
+          "E-0005",
           "E-0007"
         ],
         "rejected_options": [
@@ -560,7 +560,7 @@
       },
       "confidence": 0.9,
       "evidence": [],
-      "created_at": "2026-11-15T12:50:53.289685",
+      "created_at": "2026-11-15T13:39:55.457586",
       "version": 1,
       "supersedes": null
     }
@@ -572,92 +572,99 @@
       "event_type": "CASE_INITIALIZED",
       "agent": "orchestrator",
       "details": "Case TEST-INT-S2 initialized with report: DISRUPTION ALERT: Rockslide has blocked Mumbai-Pune Expressway along LANE-MUM-PU...",
-      "timestamp": "2026-11-15T12:50:53.272899"
+      "timestamp": "2026-11-15T13:39:55.186308"
     },
     {
       "event_id": "AUD-0002",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
-      "timestamp": "2026-11-15T12:50:53.272917"
+      "timestamp": "2026-11-15T13:39:55.186382"
     },
     {
       "event_id": "AUD-0003",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
-      "timestamp": "2026-11-15T12:50:53.272927"
+      "timestamp": "2026-11-15T13:39:55.191099"
     },
     {
       "event_id": "AUD-0004",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.275125"
+      "timestamp": "2026-11-15T13:39:55.212613"
     },
     {
       "event_id": "AUD-0005",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.275156"
+      "timestamp": "2026-11-15T13:39:55.212779"
     },
     {
       "event_id": "AUD-0006",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.275177"
+      "timestamp": "2026-11-15T13:39:55.212909"
     },
     {
       "event_id": "AUD-0007",
       "event_type": "ENTRY_POSTED",
       "agent": "inventory",
       "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
-      "timestamp": "2026-11-15T12:50:53.276780"
+      "timestamp": "2026-11-15T13:39:55.239082"
     },
     {
       "event_id": "AUD-0008",
       "event_type": "ENTRY_POSTED",
-      "agent": "supplier",
-      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.285299"
+      "agent": "route",
+      "details": "Posted E-0005 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T13:39:55.319657"
     },
     {
       "event_id": "AUD-0009",
       "event_type": "ENTRY_POSTED",
-      "agent": "route",
-      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
-      "timestamp": "2026-11-15T12:50:53.287462"
+      "agent": "supplier",
+      "details": "Posted E-0006 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T13:39:55.419086"
     },
     {
       "event_id": "AUD-0010",
       "event_type": "ENTRY_POSTED",
       "agent": "cost",
       "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
-      "timestamp": "2026-11-15T12:50:53.289149"
+      "timestamp": "2026-11-15T13:39:55.443177"
     },
     {
       "event_id": "AUD-0011",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
-      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
-      "timestamp": "2026-11-15T12:50:53.289174"
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness passed",
+      "timestamp": "2026-11-15T13:39:55.445557"
     },
     {
       "event_id": "AUD-0012",
       "event_type": "ENTRY_POSTED",
       "agent": "coordinator",
       "details": "Posted E-0008 (DECISION) with confidence 0.90",
-      "timestamp": "2026-11-15T12:50:53.289695"
+      "timestamp": "2026-11-15T13:39:55.457652"
     },
     {
       "event_id": "AUD-0013",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from READY to DECIDED. Mitigation decision posted",
-      "timestamp": "2026-11-15T12:50:53.289721"
+      "timestamp": "2026-11-15T13:39:55.457747"
+    },
+    {
+      "event_id": "AUD-0014",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from DECIDED to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T13:39:55.516632"
     }
   ],
-  "created_at": "2026-11-15T12:50:53.300338"
+  "created_at": "2026-11-15T13:39:55.560106"
 }

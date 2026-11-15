@@ -3,7 +3,7 @@
   "report": {
     "report_id": "REP-TEST-INT-S9",
     "text": "MULTI-SITE ALERT: Power surge halted deliveries of SKU-1001 and SKU-1002 to both Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02) for 9 days. Severity: 4.",
-    "reported_at": "2026-11-15T12:50:53.589947",
+    "reported_at": "2026-11-15T13:39:58.475343",
     "source": "MANUAL"
   },
   "entries": [
@@ -28,7 +28,7 @@
           "snippet": "MULTI-SITE ALERT: Power surge halted deliveries of SKU-1001 and SKU-1002 to both Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02) for 9 days. Severity: 4."
         }
       ],
-      "created_at": "2026-11-15T12:50:53.592817",
+      "created_at": "2026-11-15T13:39:58.508128",
       "version": 1,
       "supersedes": null
     },
@@ -62,7 +62,7 @@
           "snippet": "MULTI-SITE ALERT: Power surge halted deliveries of SKU-1001 and SKU-1002 to both Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02) for 9 days. Severity: 4."
         }
       ],
-      "created_at": "2026-11-15T12:50:53.592856",
+      "created_at": "2026-11-15T13:39:58.508365",
       "version": 1,
       "supersedes": null
     },
@@ -96,7 +96,7 @@
           "snippet": "MULTI-SITE ALERT: Power surge halted deliveries of SKU-1001 and SKU-1002 to both Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02) for 9 days. Severity: 4."
         }
       ],
-      "created_at": "2026-11-15T12:50:53.592877",
+      "created_at": "2026-11-15T13:39:58.508511",
       "version": 1,
       "supersedes": null
     },
@@ -180,129 +180,12 @@
           "snippet": "on_hand=2400, safety_stock=700, demand=160.0/day, in_transit=0"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.597174",
+      "created_at": "2026-11-15T13:39:58.557807",
       "version": 1,
       "supersedes": null
     },
     {
       "entry_id": "E-0005",
-      "type": "SUPPLIER_OPTIONS",
-      "author": "supplier",
-      "payload": {
-        "options": [
-          {
-            "supplier_id": "SUP-001",
-            "supplier_name": "Apex Micro Systems",
-            "sku": "SKU-1001",
-            "unit_price_inr": 650.0,
-            "moq": 1000,
-            "lead_time_days": 10,
-            "capacity": 8000,
-            "reliability_score": 0.92,
-            "contract_ref": "CTR-SUP001-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          },
-          {
-            "supplier_id": "SUP-006",
-            "supplier_name": "Pacific Circuit Solutions",
-            "sku": "SKU-1001",
-            "unit_price_inr": 710.0,
-            "moq": 500,
-            "lead_time_days": 5,
-            "capacity": 3500,
-            "reliability_score": 0.91,
-            "contract_ref": "CTR-SUP006-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          },
-          {
-            "supplier_id": "SUP-004",
-            "supplier_name": "Silicon Craft Technologies",
-            "sku": "SKU-1001",
-            "unit_price_inr": 680.0,
-            "moq": 500,
-            "lead_time_days": 6,
-            "capacity": 4000,
-            "reliability_score": 0.96,
-            "contract_ref": "CTR-SUP004-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          },
-          {
-            "supplier_id": "SUP-002",
-            "supplier_name": "Bharat Power Semi Ltd",
-            "sku": "SKU-1002",
-            "unit_price_inr": 280.0,
-            "moq": 1500,
-            "lead_time_days": 8,
-            "capacity": 12000,
-            "reliability_score": 0.89,
-            "contract_ref": "CTR-SUP002-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          },
-          {
-            "supplier_id": "SUP-004",
-            "supplier_name": "Silicon Craft Technologies",
-            "sku": "SKU-1002",
-            "unit_price_inr": 295.0,
-            "moq": 1000,
-            "lead_time_days": 5,
-            "capacity": 6000,
-            "reliability_score": 0.96,
-            "contract_ref": "CTR-SUP004-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          }
-        ],
-        "summary": "Evaluated 5 supplier options across 2 SKUs."
-      },
-      "confidence": 0.95,
-      "evidence": [
-        {
-          "evidence_id": "EV-0001",
-          "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 3: Force Majeure & Disruption Protocols",
-          "snippet": "### Section 3: Force Majeure & Disruption Protocols\nIn the event of manufacturing line stoppages, component shortages, or wafer fabrication delays exceeding 7 calendar days:\n- The Supplier must provide written notification within 24 hours of identifying the delay.\n- ResilienceHub"
-        },
-        {
-          "evidence_id": "EV-0002",
-          "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 2: Pricing and Standard Lead Times",
-          "snippet": "### Section 2: Pricing and Standard Lead Times\n- SKU-1042: Base Contract Price INR 1,450 per unit. Standard delivery lead time is 12 business days from purchase order confirmation.\n- SKU-1001: Base Contract Price INR 650 per unit. Standard delivery lead time is 10 business days."
-        },
-        {
-          "evidence_id": "EV-0003",
-          "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 1: Pre-Qualified Alternate Supplier Status",
-          "snippet": "### Section 1: Pre-Qualified Alternate Supplier Status\nSilicon Craft Technologies is a certified ISO-9001 and IATF-16949 secondary supplier for Microcontroller and Processing ICs (SKU-1042, SKU-1001, SKU-1002). All production lines at Bengaluru facility are pre-qualified for dire"
-        },
-        {
-          "evidence_id": "EV-0004",
-          "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 3: Priority Dispatch & Emergency Surcharges",
-          "snippet": "### Section 3: Priority Dispatch & Emergency Surcharges\n- Expedited 3-day turnaround is guaranteed upon payment of an emergency handling surcharge of INR 25,000 per order.\n- Freight is coordinated via dedicated express road freight (LANE-BLR-CHN-RD) or air cargo."
-        },
-        {
-          "evidence_id": "EV-0005",
-          "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 1: Pre-Qualified Alternate Supplier Status",
-          "snippet": "### Section 1: Pre-Qualified Alternate Supplier Status\nSilicon Craft Technologies is a certified ISO-9001 and IATF-16949 secondary supplier for Microcontroller and Processing ICs (SKU-1042, SKU-1001, SKU-1002). All production lines at Bengaluru facility are pre-qualified for dire"
-        },
-        {
-          "evidence_id": "EV-0006",
-          "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 3: Priority Dispatch & Emergency Surcharges",
-          "snippet": "### Section 3: Priority Dispatch & Emergency Surcharges\n- Expedited 3-day turnaround is guaranteed upon payment of an emergency handling surcharge of INR 25,000 per order.\n- Freight is coordinated via dedicated express road freight (LANE-BLR-CHN-RD) or air cargo."
-        }
-      ],
-      "created_at": "2026-11-15T12:50:53.604486",
-      "version": 1,
-      "supersedes": null
-    },
-    {
-      "entry_id": "E-0006",
       "type": "ROUTE_OPTIONS",
       "author": "route",
       "payload": {
@@ -430,25 +313,142 @@
       "confidence": 0.94,
       "evidence": [
         {
-          "evidence_id": "EV-0007",
+          "evidence_id": "EV-0001",
           "source_type": "RAG",
-          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
-          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
+          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
+          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
         },
         {
-          "evidence_id": "EV-0008",
+          "evidence_id": "EV-0002",
           "source_type": "RAG",
           "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
           "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
         },
         {
-          "evidence_id": "EV-0009",
+          "evidence_id": "EV-0003",
           "source_type": "RAG",
-          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
-          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
+          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
+          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.607028",
+      "created_at": "2026-11-15T13:39:58.636750",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
+      "type": "SUPPLIER_OPTIONS",
+      "author": "supplier",
+      "payload": {
+        "options": [
+          {
+            "supplier_id": "SUP-001",
+            "supplier_name": "Apex Micro Systems",
+            "sku": "SKU-1001",
+            "unit_price_inr": 650.0,
+            "moq": 1000,
+            "lead_time_days": 10,
+            "capacity": 8000,
+            "reliability_score": 0.92,
+            "contract_ref": "CTR-SUP001-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-006",
+            "supplier_name": "Pacific Circuit Solutions",
+            "sku": "SKU-1001",
+            "unit_price_inr": 710.0,
+            "moq": 500,
+            "lead_time_days": 5,
+            "capacity": 3500,
+            "reliability_score": 0.91,
+            "contract_ref": "CTR-SUP006-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-004",
+            "supplier_name": "Silicon Craft Technologies",
+            "sku": "SKU-1001",
+            "unit_price_inr": 680.0,
+            "moq": 500,
+            "lead_time_days": 6,
+            "capacity": 4000,
+            "reliability_score": 0.96,
+            "contract_ref": "CTR-SUP004-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-002",
+            "supplier_name": "Bharat Power Semi Ltd",
+            "sku": "SKU-1002",
+            "unit_price_inr": 280.0,
+            "moq": 1500,
+            "lead_time_days": 8,
+            "capacity": 12000,
+            "reliability_score": 0.89,
+            "contract_ref": "CTR-SUP002-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-004",
+            "supplier_name": "Silicon Craft Technologies",
+            "sku": "SKU-1002",
+            "unit_price_inr": 295.0,
+            "moq": 1000,
+            "lead_time_days": 5,
+            "capacity": 6000,
+            "reliability_score": 0.96,
+            "contract_ref": "CTR-SUP004-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          }
+        ],
+        "summary": "Evaluated 5 supplier options across 2 SKUs."
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-0001",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 4: Expedited Production",
+          "snippet": "### Section 4: Expedited Production\nExpedited batch delivery can reduce lead time to 7 business days subject to a standard expedite fee of INR 35,000 plus 10% unit price surcharge. Maximum monthly expedited allocation is 2,500 units."
+        },
+        {
+          "evidence_id": "EV-0002",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 1: Scope & Products",
+          "snippet": "### Section 1: Scope & Products\nApex Micro Systems is designated as the Primary Tier-1 Supplier for Industrial Microcontroller Units (SKU-1042, SKU-1001) to ResilienceHub manufacturing facilities including the Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02)."
+        },
+        {
+          "evidence_id": "EV-0003",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 1: Pre-Qualified Alternate Supplier Status",
+          "snippet": "### Section 1: Pre-Qualified Alternate Supplier Status\nSilicon Craft Technologies is a certified ISO-9001 and IATF-16949 secondary supplier for Microcontroller and Processing ICs (SKU-1042, SKU-1001, SKU-1002). All production lines at Bengaluru facility are pre-qualified for dire"
+        },
+        {
+          "evidence_id": "EV-0004",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 4: Mutual Non-Exclusivity",
+          "snippet": "### Section 4: Mutual Non-Exclusivity\nResilienceHub is free to place secondary and surge demand purchase orders without minimum annual commitment quotas, provided orders meet MOQ thresholds."
+        },
+        {
+          "evidence_id": "EV-0005",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 1: Pre-Qualified Alternate Supplier Status",
+          "snippet": "### Section 1: Pre-Qualified Alternate Supplier Status\nSilicon Craft Technologies is a certified ISO-9001 and IATF-16949 secondary supplier for Microcontroller and Processing ICs (SKU-1042, SKU-1001, SKU-1002). All production lines at Bengaluru facility are pre-qualified for dire"
+        },
+        {
+          "evidence_id": "EV-0006",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 4: Mutual Non-Exclusivity",
+          "snippet": "### Section 4: Mutual Non-Exclusivity\nResilienceHub is free to place secondary and surge demand purchase orders without minimum annual commitment quotas, provided orders meet MOQ thresholds."
+        }
+      ],
+      "created_at": "2026-11-15T13:39:58.736627",
       "version": 1,
       "supersedes": null
     },
@@ -583,7 +583,7 @@
           "snippet": "Evaluated 6 options for SKU SKU-1001 at unit base INR 650.00"
         }
       ],
-      "created_at": "2026-11-15T12:50:53.608567",
+      "created_at": "2026-11-15T13:39:58.758225",
       "version": 1,
       "supersedes": null
     },
@@ -595,11 +595,11 @@
         "action": "REORDER",
         "chosen_option_id": "SUP-004",
         "total_cost_inr": 781622.5,
-        "rationale": "REORDER option SUP-004 chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.",
+        "rationale": "REORDER option SUP-004 chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0006, E-0005, E-0007.",
         "cited_entry_ids": [
           "E-0004",
-          "E-0005",
           "E-0006",
+          "E-0005",
           "E-0007"
         ],
         "rejected_options": [
@@ -629,7 +629,7 @@
       },
       "confidence": 0.9,
       "evidence": [],
-      "created_at": "2026-11-15T12:50:53.609379",
+      "created_at": "2026-11-15T13:39:58.773182",
       "version": 1,
       "supersedes": null
     }
@@ -641,92 +641,99 @@
       "event_type": "CASE_INITIALIZED",
       "agent": "orchestrator",
       "details": "Case TEST-INT-S9 initialized with report: MULTI-SITE ALERT: Power surge halted deliveries of SKU-1001 and SKU-1002 to both...",
-      "timestamp": "2026-11-15T12:50:53.589973"
+      "timestamp": "2026-11-15T13:39:58.475426"
     },
     {
       "event_id": "AUD-0002",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
-      "timestamp": "2026-11-15T12:50:53.589987"
+      "timestamp": "2026-11-15T13:39:58.475486"
     },
     {
       "event_id": "AUD-0003",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
-      "timestamp": "2026-11-15T12:50:53.589994"
+      "timestamp": "2026-11-15T13:39:58.479699"
     },
     {
       "event_id": "AUD-0004",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.592835"
+      "timestamp": "2026-11-15T13:39:58.508228"
     },
     {
       "event_id": "AUD-0005",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.592862"
+      "timestamp": "2026-11-15T13:39:58.508409"
     },
     {
       "event_id": "AUD-0006",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.592881"
+      "timestamp": "2026-11-15T13:39:58.508550"
     },
     {
       "event_id": "AUD-0007",
       "event_type": "ENTRY_POSTED",
       "agent": "inventory",
       "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
-      "timestamp": "2026-11-15T12:50:53.597188"
+      "timestamp": "2026-11-15T13:39:58.557881"
     },
     {
       "event_id": "AUD-0008",
       "event_type": "ENTRY_POSTED",
-      "agent": "supplier",
-      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:50:53.604504"
+      "agent": "route",
+      "details": "Posted E-0005 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T13:39:58.636805"
     },
     {
       "event_id": "AUD-0009",
       "event_type": "ENTRY_POSTED",
-      "agent": "route",
-      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
-      "timestamp": "2026-11-15T12:50:53.607044"
+      "agent": "supplier",
+      "details": "Posted E-0006 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T13:39:58.736707"
     },
     {
       "event_id": "AUD-0010",
       "event_type": "ENTRY_POSTED",
       "agent": "cost",
       "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
-      "timestamp": "2026-11-15T12:50:53.608579"
+      "timestamp": "2026-11-15T13:39:58.758299"
     },
     {
       "event_id": "AUD-0011",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
-      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
-      "timestamp": "2026-11-15T12:50:53.608602"
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness passed",
+      "timestamp": "2026-11-15T13:39:58.760918"
     },
     {
       "event_id": "AUD-0012",
       "event_type": "ENTRY_POSTED",
       "agent": "coordinator",
       "details": "Posted E-0008 (DECISION) with confidence 0.90",
-      "timestamp": "2026-11-15T12:50:53.609389"
+      "timestamp": "2026-11-15T13:39:58.773229"
     },
     {
       "event_id": "AUD-0013",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from READY to DECIDED. Mitigation decision posted",
-      "timestamp": "2026-11-15T12:50:53.609414"
+      "timestamp": "2026-11-15T13:39:58.773304"
+    },
+    {
+      "event_id": "AUD-0014",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from DECIDED to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T13:39:58.823934"
     }
   ],
-  "created_at": "2026-11-15T12:50:53.616216"
+  "created_at": "2026-11-15T13:39:58.861566"
 }

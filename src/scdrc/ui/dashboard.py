@@ -7,7 +7,6 @@ import json
 import os
 from pathlib import Path
 import streamlit as st
-import pandas as pd
 
 from scdrc.core.orchestrator import Orchestrator
 from scdrc.core.config import load_settings
@@ -36,6 +35,28 @@ st.markdown("""
     .decision-hold { background-color: #FFFBEB; border: 2px solid #F59E0B; border-radius: 8px; padding: 15px; }
 </style>
 """, unsafe_allow_html=True)
+
+
+def render_styled_table(data: list) -> None:
+    """Renders a responsive HTML table with zero external DLL / pyarrow dependencies."""
+    if not data:
+        st.write("No records to display.")
+        return
+    headers = list(data[0].keys())
+    th_html = "".join(f"<th style='padding: 8px 12px; background-color: #F3F4F6; border: 1px solid #E5E7EB; text-align: left; font-weight: 600;'>{h}</th>" for h in headers)
+    tr_html = ""
+    for r in data:
+        td_html = "".join(f"<td style='padding: 8px 12px; border: 1px solid #E5E7EB;'>{r.get(h, '')}</td>" for h in headers)
+        tr_html += f"<tr>{td_html}</tr>"
+    html = f"""
+    <div style='overflow-x: auto; margin-bottom: 1rem;'>
+      <table style='width: 100%; border-collapse: collapse; font-family: sans-serif; font-size: 0.92rem;'>
+        <thead><tr>{th_html}</tr></thead>
+        <tbody>{tr_html}</tbody>
+      </table>
+    </div>
+    """
+    st.markdown(html, unsafe_allow_html=True)
 
 
 @st.cache_resource
@@ -96,6 +117,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown(f"**Mode:** `{settings.mode.upper()}`")
 st.sidebar.markdown(f"**Database:** SQLite (`data/scdrc.db`)")
 st.sidebar.markdown(f"**Vector Store:** ChromaDB (`data/chroma_db`)")
+st.sidebar.markdown(f"**Framework:** `LangChain & LangGraph`")
 st.sidebar.markdown(f"**Agents:** 6 (Monitor, Inventory, Supplier, Route, Cost, Coordinator)")
 
 
@@ -174,9 +196,11 @@ if res:
         st.markdown("#### Rejected Mitigation Alternatives")
         rejected = dec.get("rejected", [])
         if rejected:
-            rej_df = pd.DataFrame(rejected)
-            rej_df.columns = ["Option ID", "Reason for Rejection"]
-            st.dataframe(rej_df, use_container_width=True)
+            rej_data = [
+                {"Option ID": r.get("option", ""), "Reason for Rejection": r.get("reason", "")}
+                for r in rejected
+            ]
+            render_styled_table(rej_data)
         else:
             st.write("No viable alternatives were evaluated or rejected.")
 
@@ -230,8 +254,7 @@ if res:
                                 "Viable?": "✅ VIABLE" if opt.get("is_viable") else "❌ NON-VIABLE",
                                 "Reason": opt.get("non_viability_reason") or "Viable",
                             })
-                        cost_df = pd.DataFrame(df_rows)
-                        st.dataframe(cost_df, use_container_width=True)
+                        render_styled_table(df_rows)
                     st.info(f"**Methodology:** {cost_entry['payload'].get('methodology')}")
 
     # Tab 4: Notifications Outbox
@@ -270,6 +293,6 @@ if res:
                     "Tokens": s["total_tokens"],
                     "Tool Calls": ", ".join(s["tool_calls"]) if s.get("tool_calls") else "None",
                 })
-            st.dataframe(pd.DataFrame(span_rows), use_container_width=True)
+            render_styled_table(span_rows)
 else:
     st.info("👈 Select a disruption scenario from the sidebar and click **Coordinate Response** to run the multi-agent Blackboard system.")

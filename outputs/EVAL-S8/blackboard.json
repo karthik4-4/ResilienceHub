@@ -3,7 +3,7 @@
   "report": {
     "report_id": "REP-EVAL-S8",
     "text": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week.",
-    "reported_at": "2026-11-15T12:34:35.450294",
+    "reported_at": "2026-11-15T13:39:36.544223",
     "source": "MANUAL"
   },
   "entries": [
@@ -28,7 +28,7 @@
           "snippet": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.453331",
+      "created_at": "2026-11-15T13:39:36.550179",
       "version": 1,
       "supersedes": null
     },
@@ -52,7 +52,7 @@
           "snippet": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.453406",
+      "created_at": "2026-11-15T13:39:36.550217",
       "version": 1,
       "supersedes": null
     },
@@ -76,7 +76,7 @@
           "snippet": "Vague rumor: Heard there are big shipment problems somewhere in the southern logistics corridor, maybe things will be late next week."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.453425",
+      "created_at": "2026-11-15T13:39:36.550235",
       "version": 1,
       "supersedes": null
     },
@@ -90,26 +90,12 @@
       },
       "confidence": 0.98,
       "evidence": [],
-      "created_at": "2026-11-15T12:34:35.453614",
+      "created_at": "2026-11-15T13:39:36.552877",
       "version": 1,
       "supersedes": null
     },
     {
       "entry_id": "E-0005",
-      "type": "SUPPLIER_OPTIONS",
-      "author": "supplier",
-      "payload": {
-        "options": [],
-        "summary": "Evaluated 0 supplier options across 0 SKUs."
-      },
-      "confidence": 0.95,
-      "evidence": [],
-      "created_at": "2026-11-15T12:34:35.453652",
-      "version": 1,
-      "supersedes": null
-    },
-    {
-      "entry_id": "E-0006",
       "type": "ROUTE_OPTIONS",
       "author": "route",
       "payload": {
@@ -276,25 +262,39 @@
       "confidence": 0.94,
       "evidence": [
         {
-          "evidence_id": "EV-0074",
-          "source_type": "RAG",
-          "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
-          "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
-        },
-        {
-          "evidence_id": "EV-0075",
+          "evidence_id": "EV-0001",
           "source_type": "RAG",
           "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
           "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
         },
         {
-          "evidence_id": "EV-0076",
+          "evidence_id": "EV-0002",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
+          "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
+        },
+        {
+          "evidence_id": "EV-0003",
           "source_type": "RAG",
           "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
           "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
         }
       ],
-      "created_at": "2026-11-15T12:34:35.456784",
+      "created_at": "2026-11-15T13:39:36.570200",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
+      "type": "SUPPLIER_OPTIONS",
+      "author": "supplier",
+      "payload": {
+        "options": [],
+        "summary": "Evaluated 0 supplier options across 0 SKUs."
+      },
+      "confidence": 0.95,
+      "evidence": [],
+      "created_at": "2026-11-15T13:39:36.619211",
       "version": 1,
       "supersedes": null
     },
@@ -333,7 +333,7 @@
           "snippet": "Evaluated 1 options for SKU SKU-1042 at unit base INR 1450.00"
         }
       ],
-      "created_at": "2026-11-15T12:34:35.458447",
+      "created_at": "2026-11-15T13:39:36.639686",
       "version": 1,
       "supersedes": null
     },
@@ -345,11 +345,11 @@
         "action": "HOLD",
         "chosen_option_id": "HOLD",
         "total_cost_inr": 0.0,
-        "rationale": "All alternative options are non-viable or blocked. Escalating to human supervision per cited entries: E-0004, E-0005, E-0006, E-0007.",
+        "rationale": "Report is ambiguous with unresolved entities (southern logistics corridor, rumor). Holding action pending manual intelligence verification per E-0002.",
         "cited_entry_ids": [
           "E-0004",
-          "E-0005",
           "E-0006",
+          "E-0005",
           "E-0007"
         ],
         "rejected_options": [],
@@ -358,7 +358,7 @@
       },
       "confidence": 0.5,
       "evidence": [],
-      "created_at": "2026-11-15T12:34:35.458826",
+      "created_at": "2026-11-15T13:39:36.652741",
       "version": 1,
       "supersedes": null
     }
@@ -370,92 +370,99 @@
       "event_type": "CASE_INITIALIZED",
       "agent": "orchestrator",
       "details": "Case EVAL-S8 initialized with report: Vague rumor: Heard there are big shipment problems somewhere in the southern log...",
-      "timestamp": "2026-11-15T12:34:35.450310"
+      "timestamp": "2026-11-15T13:39:36.544274"
     },
     {
       "event_id": "AUD-0002",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
-      "timestamp": "2026-11-15T12:34:35.450321"
+      "timestamp": "2026-11-15T13:39:36.544303"
     },
     {
       "event_id": "AUD-0003",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
-      "timestamp": "2026-11-15T12:34:35.450326"
+      "timestamp": "2026-11-15T13:39:36.546032"
     },
     {
       "event_id": "AUD-0004",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.40",
-      "timestamp": "2026-11-15T12:34:35.453372"
+      "timestamp": "2026-11-15T13:39:36.550199"
     },
     {
       "event_id": "AUD-0005",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.40",
-      "timestamp": "2026-11-15T12:34:35.453412"
+      "timestamp": "2026-11-15T13:39:36.550224"
     },
     {
       "event_id": "AUD-0006",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.40",
-      "timestamp": "2026-11-15T12:34:35.453430"
+      "timestamp": "2026-11-15T13:39:36.550241"
     },
     {
       "event_id": "AUD-0007",
       "event_type": "ENTRY_POSTED",
       "agent": "inventory",
       "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
-      "timestamp": "2026-11-15T12:34:35.453621"
+      "timestamp": "2026-11-15T13:39:36.552893"
     },
     {
       "event_id": "AUD-0008",
       "event_type": "ENTRY_POSTED",
-      "agent": "supplier",
-      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.453657"
+      "agent": "route",
+      "details": "Posted E-0005 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T13:39:36.570221"
     },
     {
       "event_id": "AUD-0009",
       "event_type": "ENTRY_POSTED",
-      "agent": "route",
-      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
-      "timestamp": "2026-11-15T12:34:35.456803"
+      "agent": "supplier",
+      "details": "Posted E-0006 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T13:39:36.619270"
     },
     {
       "event_id": "AUD-0010",
       "event_type": "ENTRY_POSTED",
       "agent": "cost",
       "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
-      "timestamp": "2026-11-15T12:34:35.458458"
+      "timestamp": "2026-11-15T13:39:36.639744"
     },
     {
       "event_id": "AUD-0011",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
-      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
-      "timestamp": "2026-11-15T12:34:35.458480"
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness passed",
+      "timestamp": "2026-11-15T13:39:36.641287"
     },
     {
       "event_id": "AUD-0012",
       "event_type": "ENTRY_POSTED",
       "agent": "coordinator",
       "details": "Posted E-0008 (DECISION) with confidence 0.50",
-      "timestamp": "2026-11-15T12:34:35.458835"
+      "timestamp": "2026-11-15T13:39:36.652803"
     },
     {
       "event_id": "AUD-0013",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from READY to DECIDED. Mitigation decision posted",
-      "timestamp": "2026-11-15T12:34:35.458852"
+      "timestamp": "2026-11-15T13:39:36.652875"
+    },
+    {
+      "event_id": "AUD-0014",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from DECIDED to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T13:39:36.691399"
     }
   ],
-  "created_at": "2026-11-15T12:34:35.460300"
+  "created_at": "2026-11-15T13:39:36.700185"
 }

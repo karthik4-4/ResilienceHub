@@ -3,7 +3,7 @@
   "report": {
     "report_id": "REP-EVAL-S5",
     "text": "SUPPLIER DISRUPTION: Primary vendor Apex Micro Systems reports machinery breakdown delaying SKU-1042 for Chennai Plant (SITE-CHN-01) by 14 days. On-hand cover is 4 days. Need 1200 units. Severity: 4.",
-    "reported_at": "2026-11-15T12:34:35.386411",
+    "reported_at": "2026-11-15T13:39:36.296347",
     "source": "MANUAL"
   },
   "entries": [
@@ -28,7 +28,7 @@
           "snippet": "SUPPLIER DISRUPTION: Primary vendor Apex Micro Systems reports machinery breakdown delaying SKU-1042 for Chennai Plant (SITE-CHN-01) by 14 days. On-hand cover is 4 days. Need 1200 units. Severity: 4."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.388389",
+      "created_at": "2026-11-15T13:39:36.301052",
       "version": 1,
       "supersedes": null
     },
@@ -56,7 +56,7 @@
           "snippet": "SUPPLIER DISRUPTION: Primary vendor Apex Micro Systems reports machinery breakdown delaying SKU-1042 for Chennai Plant (SITE-CHN-01) by 14 days. On-hand cover is 4 days. Need 1200 units. Severity: 4."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.388429",
+      "created_at": "2026-11-15T13:39:36.301095",
       "version": 1,
       "supersedes": null
     },
@@ -84,7 +84,7 @@
           "snippet": "SUPPLIER DISRUPTION: Primary vendor Apex Micro Systems reports machinery breakdown delaying SKU-1042 for Chennai Plant (SITE-CHN-01) by 14 days. On-hand cover is 4 days. Need 1200 units. Severity: 4."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.388449",
+      "created_at": "2026-11-15T13:39:36.301116",
       "version": 1,
       "supersedes": null
     },
@@ -117,128 +117,12 @@
           "snippet": "on_hand=480, safety_stock=300, demand=120.0/day, in_transit=0"
         }
       ],
-      "created_at": "2026-11-15T12:34:35.389944",
+      "created_at": "2026-11-15T13:39:36.304886",
       "version": 1,
       "supersedes": null
     },
     {
       "entry_id": "E-0005",
-      "type": "SUPPLIER_OPTIONS",
-      "author": "supplier",
-      "payload": {
-        "options": [
-          {
-            "supplier_id": "SUP-001",
-            "supplier_name": "Apex Micro Systems",
-            "sku": "SKU-1042",
-            "unit_price_inr": 1450.0,
-            "moq": 500,
-            "lead_time_days": 12,
-            "capacity": 5000,
-            "reliability_score": 0.92,
-            "contract_ref": "CTR-SUP001-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          },
-          {
-            "supplier_id": "SUP-012",
-            "supplier_name": "Zenith Fastline Electronics",
-            "sku": "SKU-1042",
-            "unit_price_inr": 1680.0,
-            "moq": 200,
-            "lead_time_days": 4,
-            "capacity": 2000,
-            "reliability_score": 0.94,
-            "contract_ref": "CTR-SUP012-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          },
-          {
-            "supplier_id": "SUP-004",
-            "supplier_name": "Silicon Craft Technologies",
-            "sku": "SKU-1042",
-            "unit_price_inr": 1520.0,
-            "moq": 300,
-            "lead_time_days": 5,
-            "capacity": 3000,
-            "reliability_score": 0.96,
-            "contract_ref": "CTR-SUP004-2025",
-            "qualified": true,
-            "disqualification_reason": null
-          },
-          {
-            "supplier_id": "SUP-009",
-            "supplier_name": "QuickSource Components",
-            "sku": "SKU-1042",
-            "unit_price_inr": 1150.0,
-            "moq": 1000,
-            "lead_time_days": 14,
-            "capacity": 10000,
-            "reliability_score": 0.72,
-            "contract_ref": "CTR-SUP009-2025",
-            "qualified": false,
-            "disqualification_reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause"
-          }
-        ],
-        "summary": "Evaluated 4 supplier options across 1 SKUs."
-      },
-      "confidence": 0.95,
-      "evidence": [
-        {
-          "evidence_id": "EV-0041",
-          "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 3: Force Majeure & Disruption Protocols",
-          "snippet": "### Section 3: Force Majeure & Disruption Protocols\nIn the event of manufacturing line stoppages, component shortages, or wafer fabrication delays exceeding 7 calendar days:\n- The Supplier must provide written notification within 24 hours of identifying the delay.\n- ResilienceHub"
-        },
-        {
-          "evidence_id": "EV-0042",
-          "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 2: Pricing and Standard Lead Times",
-          "snippet": "### Section 2: Pricing and Standard Lead Times\n- SKU-1042: Base Contract Price INR 1,450 per unit. Standard delivery lead time is 12 business days from purchase order confirmation.\n- SKU-1001: Base Contract Price INR 650 per unit. Standard delivery lead time is 10 business days."
-        },
-        {
-          "evidence_id": "EV-0043",
-          "source_type": "RAG",
-          "citation": "CTR-SUP012-2025 \u00a7 Section 2: Terms and Pricing",
-          "snippet": "### Section 2: Terms and Pricing\n- SKU-1042: Express unit price INR 1,680 per unit. MOQ: 200 units.\n- Standard lead time: 4 business days. Expedite lead time: 2 business days via chartered cargo.\n- Fixed expedite handling charge: INR 45,000 per order."
-        },
-        {
-          "evidence_id": "EV-0044",
-          "source_type": "RAG",
-          "citation": "CTR-SUP012-2025 \u00a7 Section 1: Rapid Dispatch Services",
-          "snippet": "### Section 1: Rapid Dispatch Services\nZenith Fastline Electronics provides express spot inventory for critical electronic microcontrollers (SKU-1042) and power management ICs. Units are pre-inspected and stocked at Bengaluru Domestic Airport Bonded Warehouse."
-        },
-        {
-          "evidence_id": "EV-0045",
-          "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 2: Lead Times and MOQ",
-          "snippet": "### Section 2: Lead Times and MOQ\n- SKU-1042: Contract price INR 1,520 per unit. Standard lead time is 5 business days.\n- SKU-1001: Contract price INR 680 per unit. Standard lead time is 6 business days.\n- SKU-1002: Contract price INR 295 per unit. Standard lead time is 5 busines"
-        },
-        {
-          "evidence_id": "EV-0046",
-          "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 4: Mutual Non-Exclusivity",
-          "snippet": "### Section 4: Mutual Non-Exclusivity\nResilienceHub is free to place secondary and surge demand purchase orders without minimum annual commitment quotas, provided orders meet MOQ thresholds."
-        },
-        {
-          "evidence_id": "EV-0047",
-          "source_type": "RAG",
-          "citation": "CTR-SUP009-2025 \u00a7 Section 2: Pricing and Minimum Order",
-          "snippet": "### Section 2: Pricing and Minimum Order\n- SKU-1042: Quoted price INR 1,150 per unit. MOQ: 1,000 units.\n- Standard lead time: 14 business days via regular maritime/air consolidation."
-        },
-        {
-          "evidence_id": "EV-0048",
-          "source_type": "RAG",
-          "citation": "CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause",
-          "snippet": "### Section 4.2: Exclusivity and Qualification Disqualification Clause\nUnder ResilienceHub Quality Policy clause 4.2 and Customer OEM Exclusivity Agreements, uncertified grey-market or unverified spot-market suppliers cannot supply critical SOCs (including SKU-1042) for Tier-1 au"
-        }
-      ],
-      "created_at": "2026-11-15T12:34:35.395514",
-      "version": 1,
-      "supersedes": null
-    },
-    {
-      "entry_id": "E-0006",
       "type": "ROUTE_OPTIONS",
       "author": "route",
       "payload": {
@@ -353,25 +237,141 @@
       "confidence": 0.94,
       "evidence": [
         {
-          "evidence_id": "EV-0049",
+          "evidence_id": "EV-0001",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
+          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
+        },
+        {
+          "evidence_id": "EV-0002",
           "source_type": "RAG",
           "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
           "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
         },
         {
-          "evidence_id": "EV-0050",
+          "evidence_id": "EV-0003",
           "source_type": "RAG",
           "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
           "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
-        },
-        {
-          "evidence_id": "EV-0051",
-          "source_type": "RAG",
-          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
-          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
         }
       ],
-      "created_at": "2026-11-15T12:34:35.397428",
+      "created_at": "2026-11-15T13:39:36.321489",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
+      "type": "SUPPLIER_OPTIONS",
+      "author": "supplier",
+      "payload": {
+        "options": [
+          {
+            "supplier_id": "SUP-001",
+            "supplier_name": "Apex Micro Systems",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1450.0,
+            "moq": 500,
+            "lead_time_days": 12,
+            "capacity": 5000,
+            "reliability_score": 0.92,
+            "contract_ref": "CTR-SUP001-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-012",
+            "supplier_name": "Zenith Fastline Electronics",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1680.0,
+            "moq": 200,
+            "lead_time_days": 4,
+            "capacity": 2000,
+            "reliability_score": 0.94,
+            "contract_ref": "CTR-SUP012-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-004",
+            "supplier_name": "Silicon Craft Technologies",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1520.0,
+            "moq": 300,
+            "lead_time_days": 5,
+            "capacity": 3000,
+            "reliability_score": 0.96,
+            "contract_ref": "CTR-SUP004-2025",
+            "qualified": true,
+            "disqualification_reason": null
+          },
+          {
+            "supplier_id": "SUP-009",
+            "supplier_name": "QuickSource Components",
+            "sku": "SKU-1042",
+            "unit_price_inr": 1150.0,
+            "moq": 1000,
+            "lead_time_days": 14,
+            "capacity": 10000,
+            "reliability_score": 0.72,
+            "contract_ref": "CTR-SUP009-2025",
+            "qualified": false,
+            "disqualification_reason": "Disqualified per contract terms: CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause"
+          }
+        ],
+        "summary": "Evaluated 4 supplier options across 1 SKUs."
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "EV-0001",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 4: Expedited Production",
+          "snippet": "### Section 4: Expedited Production\nExpedited batch delivery can reduce lead time to 7 business days subject to a standard expedite fee of INR 35,000 plus 10% unit price surcharge. Maximum monthly expedited allocation is 2,500 units."
+        },
+        {
+          "evidence_id": "EV-0002",
+          "source_type": "RAG",
+          "citation": "CTR-SUP001-2025 \u00a7 Section 1: Scope & Products",
+          "snippet": "### Section 1: Scope & Products\nApex Micro Systems is designated as the Primary Tier-1 Supplier for Industrial Microcontroller Units (SKU-1042, SKU-1001) to ResilienceHub manufacturing facilities including the Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02)."
+        },
+        {
+          "evidence_id": "EV-0003",
+          "source_type": "RAG",
+          "citation": "CTR-SUP012-2025 \u00a7 Section 1: Rapid Dispatch Services",
+          "snippet": "### Section 1: Rapid Dispatch Services\nZenith Fastline Electronics provides express spot inventory for critical electronic microcontrollers (SKU-1042) and power management ICs. Units are pre-inspected and stocked at Bengaluru Domestic Airport Bonded Warehouse."
+        },
+        {
+          "evidence_id": "EV-0004",
+          "source_type": "RAG",
+          "citation": "CTR-SUP012-2025 \u00a7 Section 2: Terms and Pricing",
+          "snippet": "### Section 2: Terms and Pricing\n- SKU-1042: Express unit price INR 1,680 per unit. MOQ: 200 units.\n- Standard lead time: 4 business days. Expedite lead time: 2 business days via chartered cargo.\n- Fixed expedite handling charge: INR 45,000 per order."
+        },
+        {
+          "evidence_id": "EV-0005",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 1: Pre-Qualified Alternate Supplier Status",
+          "snippet": "### Section 1: Pre-Qualified Alternate Supplier Status\nSilicon Craft Technologies is a certified ISO-9001 and IATF-16949 secondary supplier for Microcontroller and Processing ICs (SKU-1042, SKU-1001, SKU-1002). All production lines at Bengaluru facility are pre-qualified for dire"
+        },
+        {
+          "evidence_id": "EV-0006",
+          "source_type": "RAG",
+          "citation": "CTR-SUP004-2025 \u00a7 Section 4: Mutual Non-Exclusivity",
+          "snippet": "### Section 4: Mutual Non-Exclusivity\nResilienceHub is free to place secondary and surge demand purchase orders without minimum annual commitment quotas, provided orders meet MOQ thresholds."
+        },
+        {
+          "evidence_id": "EV-0007",
+          "source_type": "RAG",
+          "citation": "CTR-SUP009-2025 \u00a7 Section 4.2: Exclusivity and Qualification Disqualification Clause",
+          "snippet": "### Section 4.2: Exclusivity and Qualification Disqualification Clause\nUnder ResilienceHub Quality Policy clause 4.2 and Customer OEM Exclusivity Agreements, uncertified grey-market or unverified spot-market suppliers cannot supply critical SOCs (including SKU-1042) for Tier-1 au"
+        },
+        {
+          "evidence_id": "EV-0008",
+          "source_type": "RAG",
+          "citation": "CTR-SUP009-2025 \u00a7 Section 2: Pricing and Minimum Order",
+          "snippet": "### Section 2: Pricing and Minimum Order\n- SKU-1042: Quoted price INR 1,150 per unit. MOQ: 1,000 units.\n- Standard lead time: 14 business days via regular maritime/air consolidation."
+        }
+      ],
+      "created_at": "2026-11-15T13:39:36.340950",
       "version": 1,
       "supersedes": null
     },
@@ -486,7 +486,7 @@
           "snippet": "Evaluated 5 options for SKU SKU-1042 at unit base INR 1450.00"
         }
       ],
-      "created_at": "2026-11-15T12:34:35.399945",
+      "created_at": "2026-11-15T13:39:36.347418",
       "version": 1,
       "supersedes": null
     },
@@ -498,11 +498,11 @@
         "action": "REORDER",
         "chosen_option_id": "SUP-004",
         "total_cost_inr": 1943016.0,
-        "rationale": "All alternative options are non-viable or blocked. Escalating to human supervision per cited entries: E-0004, E-0005, E-0006, E-0007.",
+        "rationale": "REORDER option SUP-004 chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0006, E-0005, E-0007.",
         "cited_entry_ids": [
           "E-0004",
-          "E-0005",
           "E-0006",
+          "E-0005",
           "E-0007"
         ],
         "rejected_options": [
@@ -528,7 +528,7 @@
       },
       "confidence": 0.9,
       "evidence": [],
-      "created_at": "2026-11-15T12:34:35.400460",
+      "created_at": "2026-11-15T13:39:36.350684",
       "version": 1,
       "supersedes": null
     }
@@ -540,92 +540,99 @@
       "event_type": "CASE_INITIALIZED",
       "agent": "orchestrator",
       "details": "Case EVAL-S5 initialized with report: SUPPLIER DISRUPTION: Primary vendor Apex Micro Systems reports machinery breakdo...",
-      "timestamp": "2026-11-15T12:34:35.386441"
+      "timestamp": "2026-11-15T13:39:36.296378"
     },
     {
       "event_id": "AUD-0002",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
-      "timestamp": "2026-11-15T12:34:35.386459"
+      "timestamp": "2026-11-15T13:39:36.296395"
     },
     {
       "event_id": "AUD-0003",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
-      "timestamp": "2026-11-15T12:34:35.386466"
+      "timestamp": "2026-11-15T13:39:36.297338"
     },
     {
       "event_id": "AUD-0004",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.388407"
+      "timestamp": "2026-11-15T13:39:36.301071"
     },
     {
       "event_id": "AUD-0005",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.388436"
+      "timestamp": "2026-11-15T13:39:36.301102"
     },
     {
       "event_id": "AUD-0006",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.388453"
+      "timestamp": "2026-11-15T13:39:36.301121"
     },
     {
       "event_id": "AUD-0007",
       "event_type": "ENTRY_POSTED",
       "agent": "inventory",
       "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
-      "timestamp": "2026-11-15T12:34:35.389957"
+      "timestamp": "2026-11-15T13:39:36.304902"
     },
     {
       "event_id": "AUD-0008",
       "event_type": "ENTRY_POSTED",
-      "agent": "supplier",
-      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.395531"
+      "agent": "route",
+      "details": "Posted E-0005 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T13:39:36.321509"
     },
     {
       "event_id": "AUD-0009",
       "event_type": "ENTRY_POSTED",
-      "agent": "route",
-      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
-      "timestamp": "2026-11-15T12:34:35.397441"
+      "agent": "supplier",
+      "details": "Posted E-0006 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T13:39:36.340968"
     },
     {
       "event_id": "AUD-0010",
       "event_type": "ENTRY_POSTED",
       "agent": "cost",
       "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
-      "timestamp": "2026-11-15T12:34:35.399958"
+      "timestamp": "2026-11-15T13:39:36.347434"
     },
     {
       "event_id": "AUD-0011",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
-      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
-      "timestamp": "2026-11-15T12:34:35.399983"
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness passed",
+      "timestamp": "2026-11-15T13:39:36.347999"
     },
     {
       "event_id": "AUD-0012",
       "event_type": "ENTRY_POSTED",
       "agent": "coordinator",
       "details": "Posted E-0008 (DECISION) with confidence 0.90",
-      "timestamp": "2026-11-15T12:34:35.400469"
+      "timestamp": "2026-11-15T13:39:36.350707"
     },
     {
       "event_id": "AUD-0013",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from READY to DECIDED. Mitigation decision posted",
-      "timestamp": "2026-11-15T12:34:35.400491"
+      "timestamp": "2026-11-15T13:39:36.350735"
+    },
+    {
+      "event_id": "AUD-0014",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from DECIDED to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T13:39:36.365293"
     }
   ],
-  "created_at": "2026-11-15T12:34:35.405115"
+  "created_at": "2026-11-15T13:39:36.369217"
 }

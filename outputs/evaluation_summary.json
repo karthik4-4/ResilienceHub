@@ -4,8 +4,8 @@
     "accuracy_rate_pct": 100.0,
     "optimality_rate_pct": 100.0,
     "grounding_rate_pct": 100.0,
-    "avg_latency_seconds": 0.03,
-    "total_tokens": 6000
+    "avg_latency_seconds": 0.15,
+    "total_tokens": 0
   },
   "scenarios": [
     {
@@ -16,12 +16,12 @@
       "is_match": true,
       "total_cost_inr": 1943016.0,
       "chosen_option": "SUP-004",
-      "latency_seconds": 0.05,
-      "tokens": 600,
+      "latency_seconds": 0.13,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 4
@@ -34,12 +34,12 @@
       "is_match": true,
       "total_cost_inr": 18714.0,
       "chosen_option": "LANE-MUM-PUN-RL",
-      "latency_seconds": 0.02,
-      "tokens": 600,
+      "latency_seconds": 0.11,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 4
@@ -52,12 +52,12 @@
       "is_match": true,
       "total_cost_inr": 1072.5,
       "chosen_option": "HOLD",
-      "latency_seconds": 0.02,
-      "tokens": 600,
+      "latency_seconds": 0.09,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 1
@@ -70,12 +70,12 @@
       "is_match": true,
       "total_cost_inr": 635672.0,
       "chosen_option": "SUP-004",
-      "latency_seconds": 0.02,
-      "tokens": 600,
+      "latency_seconds": 0.08,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 3
@@ -88,12 +88,12 @@
       "is_match": true,
       "total_cost_inr": 1943016.0,
       "chosen_option": "SUP-004",
-      "latency_seconds": 0.02,
-      "tokens": 600,
+      "latency_seconds": 0.08,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 4
@@ -106,12 +106,12 @@
       "is_match": true,
       "total_cost_inr": 1943016.0,
       "chosen_option": "SUP-004",
-      "latency_seconds": 0.02,
-      "tokens": 600,
+      "latency_seconds": 0.09,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 4
@@ -124,15 +124,15 @@
       "is_match": true,
       "total_cost_inr": 0.0,
       "chosen_option": "HOLD",
-      "latency_seconds": 0.02,
-      "tokens": 600,
+      "latency_seconds": 0.08,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
-      "notifications_dispatched": 1
+      "notifications_dispatched": 2
     },
     {
       "scenario_id": "S8",
@@ -142,12 +142,12 @@
       "is_match": true,
       "total_cost_inr": 0.0,
       "chosen_option": "HOLD",
-      "latency_seconds": 0.01,
-      "tokens": 600,
+      "latency_seconds": 0.17,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 1
@@ -160,12 +160,12 @@
       "is_match": true,
       "total_cost_inr": 781622.5,
       "chosen_option": "SUP-004",
-      "latency_seconds": 0.03,
-      "tokens": 600,
+      "latency_seconds": 0.42,
+      "tokens": 0,
       "cited_entries": [
         "E-0004",
-        "E-0005",
         "E-0006",
+        "E-0005",
         "E-0007"
       ],
       "notifications_dispatched": 3
@@ -178,13 +178,13 @@
       "is_match": true,
       "total_cost_inr": 0.0,
       "chosen_option": "HOLD",
-      "latency_seconds": 0.07,
-      "tokens": 600,
+      "latency_seconds": 0.26,
+      "tokens": 0,
       "cited_entries": [
-        "E-0004",
+        "E-0006",
         "E-0005",
         "E-0007",
-        "E-0006"
+        "E-0004"
       ],
       "notifications_dispatched": 1
     }

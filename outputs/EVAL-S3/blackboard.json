@@ -3,7 +3,7 @@
   "report": {
     "report_id": "REP-EVAL-S3",
     "text": "LOGISTICS NOTICE: Supplier Apex Micro Systems (SUP-001) notified a 2-day minor logistics dispatch delay for SKU-1001 to Bengaluru Systems Assembly Plant (SITE-BLR-02). Severity: 2.",
-    "reported_at": "2026-11-15T12:34:35.347512",
+    "reported_at": "2026-11-15T13:39:36.122162",
     "source": "MANUAL"
   },
   "entries": [
@@ -28,7 +28,7 @@
           "snippet": "LOGISTICS NOTICE: Supplier Apex Micro Systems (SUP-001) notified a 2-day minor logistics dispatch delay for SKU-1001 to Bengaluru Systems Assembly Plant (SITE-BLR-02). Severity: 2."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.349058",
+      "created_at": "2026-11-15T13:39:36.133401",
       "version": 1,
       "supersedes": null
     },
@@ -56,7 +56,7 @@
           "snippet": "LOGISTICS NOTICE: Supplier Apex Micro Systems (SUP-001) notified a 2-day minor logistics dispatch delay for SKU-1001 to Bengaluru Systems Assembly Plant (SITE-BLR-02). Severity: 2."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.349090",
+      "created_at": "2026-11-15T13:39:36.133482",
       "version": 1,
       "supersedes": null
     },
@@ -84,7 +84,7 @@
           "snippet": "LOGISTICS NOTICE: Supplier Apex Micro Systems (SUP-001) notified a 2-day minor logistics dispatch delay for SKU-1001 to Bengaluru Systems Assembly Plant (SITE-BLR-02). Severity: 2."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.349107",
+      "created_at": "2026-11-15T13:39:36.133513",
       "version": 1,
       "supersedes": null
     },
@@ -117,12 +117,59 @@
           "snippet": "on_hand=2200, safety_stock=600, demand=140.0/day, in_transit=1500"
         }
       ],
-      "created_at": "2026-11-15T12:34:35.350452",
+      "created_at": "2026-11-15T13:39:36.138377",
       "version": 1,
       "supersedes": null
     },
     {
       "entry_id": "E-0005",
+      "type": "ROUTE_OPTIONS",
+      "author": "route",
+      "payload": {
+        "options": [
+          {
+            "route_id": "LANE-PUN-BLR-RD",
+            "origin": "SITE-PUN-03",
+            "dest": "SITE-BLR-02",
+            "mode": "ROAD",
+            "added_delay_days": 0,
+            "transit_days": 2,
+            "freight_cost_per_unit_inr": 32.0,
+            "capacity_units": 18000,
+            "risk_rating": "LOW",
+            "carrier": "VRL Logistics",
+            "advisory_ref": null
+          }
+        ],
+        "summary": "Identified 1 route options across connected logistics corridors."
+      },
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "evidence_id": "EV-0001",
+          "source_type": "RAG",
+          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
+          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
+        },
+        {
+          "evidence_id": "EV-0002",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 1. Incident Overview",
+          "snippet": "### 1. Incident Overview\nDeep depression in the Bay of Bengal and seasonal container congestion at Chennai Port Terminal have caused average berthing delays of 5 to 7 days for incoming container feeder vessels from Singapore and East Asia (`LANE-SIN-CHN-SE`)."
+        },
+        {
+          "evidence_id": "EV-0003",
+          "source_type": "RAG",
+          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
+          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
+        }
+      ],
+      "created_at": "2026-11-15T13:39:36.166455",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "entry_id": "E-0006",
       "type": "SUPPLIER_OPTIONS",
       "author": "supplier",
       "payload": {
@@ -172,78 +219,31 @@
       "confidence": 0.95,
       "evidence": [
         {
-          "evidence_id": "EV-0023",
+          "evidence_id": "EV-0001",
           "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 3: Force Majeure & Disruption Protocols",
-          "snippet": "### Section 3: Force Majeure & Disruption Protocols\nIn the event of manufacturing line stoppages, component shortages, or wafer fabrication delays exceeding 7 calendar days:\n- The Supplier must provide written notification within 24 hours of identifying the delay.\n- ResilienceHub"
+          "citation": "CTR-SUP001-2025 \u00a7 Section 4: Expedited Production",
+          "snippet": "### Section 4: Expedited Production\nExpedited batch delivery can reduce lead time to 7 business days subject to a standard expedite fee of INR 35,000 plus 10% unit price surcharge. Maximum monthly expedited allocation is 2,500 units."
         },
         {
-          "evidence_id": "EV-0024",
+          "evidence_id": "EV-0002",
           "source_type": "RAG",
-          "citation": "CTR-SUP001-2025 \u00a7 Section 2: Pricing and Standard Lead Times",
-          "snippet": "### Section 2: Pricing and Standard Lead Times\n- SKU-1042: Base Contract Price INR 1,450 per unit. Standard delivery lead time is 12 business days from purchase order confirmation.\n- SKU-1001: Base Contract Price INR 650 per unit. Standard delivery lead time is 10 business days."
+          "citation": "CTR-SUP001-2025 \u00a7 Section 1: Scope & Products",
+          "snippet": "### Section 1: Scope & Products\nApex Micro Systems is designated as the Primary Tier-1 Supplier for Industrial Microcontroller Units (SKU-1042, SKU-1001) to ResilienceHub manufacturing facilities including the Chennai Plant (SITE-CHN-01) and Bengaluru Plant (SITE-BLR-02)."
         },
         {
-          "evidence_id": "EV-0025",
+          "evidence_id": "EV-0003",
           "source_type": "RAG",
-          "citation": "CTR-SUP004-2025 \u00a7 Section 2: Lead Times and MOQ",
-          "snippet": "### Section 2: Lead Times and MOQ\n- SKU-1042: Contract price INR 1,520 per unit. Standard lead time is 5 business days.\n- SKU-1001: Contract price INR 680 per unit. Standard lead time is 6 business days.\n- SKU-1002: Contract price INR 295 per unit. Standard lead time is 5 busines"
+          "citation": "CTR-SUP004-2025 \u00a7 Section 1: Pre-Qualified Alternate Supplier Status",
+          "snippet": "### Section 1: Pre-Qualified Alternate Supplier Status\nSilicon Craft Technologies is a certified ISO-9001 and IATF-16949 secondary supplier for Microcontroller and Processing ICs (SKU-1042, SKU-1001, SKU-1002). All production lines at Bengaluru facility are pre-qualified for dire"
         },
         {
-          "evidence_id": "EV-0026",
+          "evidence_id": "EV-0004",
           "source_type": "RAG",
           "citation": "CTR-SUP004-2025 \u00a7 Section 4: Mutual Non-Exclusivity",
           "snippet": "### Section 4: Mutual Non-Exclusivity\nResilienceHub is free to place secondary and surge demand purchase orders without minimum annual commitment quotas, provided orders meet MOQ thresholds."
         }
       ],
-      "created_at": "2026-11-15T12:34:35.356431",
-      "version": 1,
-      "supersedes": null
-    },
-    {
-      "entry_id": "E-0006",
-      "type": "ROUTE_OPTIONS",
-      "author": "route",
-      "payload": {
-        "options": [
-          {
-            "route_id": "LANE-PUN-BLR-RD",
-            "origin": "SITE-PUN-03",
-            "dest": "SITE-BLR-02",
-            "mode": "ROAD",
-            "added_delay_days": 0,
-            "transit_days": 2,
-            "freight_cost_per_unit_inr": 32.0,
-            "capacity_units": 18000,
-            "risk_rating": "LOW",
-            "carrier": "VRL Logistics",
-            "advisory_ref": null
-          }
-        ],
-        "summary": "Identified 1 route options across connected logistics corridors."
-      },
-      "confidence": 0.94,
-      "evidence": [
-        {
-          "evidence_id": "EV-0027",
-          "source_type": "RAG",
-          "citation": "ADV-MUM-PUN-01 \u00a7 2. Available Alternative Corridors",
-          "snippet": "### 2. Available Alternative Corridors\n- Central Railway Freight Corridor (`LANE-MUM-PUN-RL`) remains 100% operational with green-corridor priority for industrial container rakes.\n- Added transit delay via rail is +1 to +2 days compared to standard road transit.\n- Rail capacity i"
-        },
-        {
-          "evidence_id": "EV-0028",
-          "source_type": "RAG",
-          "citation": "ADV-PORT-CHN-02 \u00a7 2. Bypass and Contingency Routes",
-          "snippet": "### 2. Bypass and Contingency Routes\n- Air freight bypass via Singapore Airlines Cargo directly to Chennai Airport (`LANE-SIN-CHN-AR`) operates on daily scheduled flights with 48-hour clearance.\n- Domestic inter-plant transfers from Bengaluru (`LANE-BLR-CHN-RD`) or Pune (`LANE-PU"
-        },
-        {
-          "evidence_id": "EV-0029",
-          "source_type": "RAG",
-          "citation": "ADV-MUM-PUN-01 \u00a7 1. Incident Overview",
-          "snippet": "### 1. Incident Overview\nHeavy monsoon rainfall has caused rockslides across the Khandala Ghat stretch of the Mumbai-Pune Expressway. Heavy commercial vehicle movement along road corridor `LANE-MUM-PUN-RD` is halted for an estimated 48 to 72 hours."
-        }
-      ],
-      "created_at": "2026-11-15T12:34:35.358679",
+      "created_at": "2026-11-15T13:39:36.188798",
       "version": 1,
       "supersedes": null
     },
@@ -336,7 +336,7 @@
           "snippet": "Evaluated 4 options for SKU SKU-1001 at unit base INR 650.00"
         }
       ],
-      "created_at": "2026-11-15T12:34:35.360326",
+      "created_at": "2026-11-15T13:39:36.194854",
       "version": 1,
       "supersedes": null
     },
@@ -348,11 +348,11 @@
         "action": "HOLD",
         "chosen_option_id": "HOLD",
         "total_cost_inr": 1072.5,
-        "rationale": "All alternative options are non-viable or blocked. Escalating to human supervision per cited entries: E-0004, E-0005, E-0006, E-0007.",
+        "rationale": "Inventory cover safely absorbs disruption duration without breaching buffer. HOLD is the cost-optimal rational decision. Cited: E-0004, E-0006, E-0005, E-0007.",
         "cited_entry_ids": [
           "E-0004",
-          "E-0005",
           "E-0006",
+          "E-0005",
           "E-0007"
         ],
         "rejected_options": [
@@ -374,7 +374,7 @@
       },
       "confidence": 0.9,
       "evidence": [],
-      "created_at": "2026-11-15T12:34:35.360744",
+      "created_at": "2026-11-15T13:39:36.198415",
       "version": 1,
       "supersedes": null
     }
@@ -386,92 +386,99 @@
       "event_type": "CASE_INITIALIZED",
       "agent": "orchestrator",
       "details": "Case EVAL-S3 initialized with report: LOGISTICS NOTICE: Supplier Apex Micro Systems (SUP-001) notified a 2-day minor l...",
-      "timestamp": "2026-11-15T12:34:35.347529"
+      "timestamp": "2026-11-15T13:39:36.122215"
     },
     {
       "event_id": "AUD-0002",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to OPEN. Case opened by Orchestrator",
-      "timestamp": "2026-11-15T12:34:35.347541"
+      "timestamp": "2026-11-15T13:39:36.122250"
     },
     {
       "event_id": "AUD-0003",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from OPEN to GATHERING. Phase 1: Monitor extraction",
-      "timestamp": "2026-11-15T12:34:35.347547"
+      "timestamp": "2026-11-15T13:39:36.124649"
     },
     {
       "event_id": "AUD-0004",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0001 (DISRUPTION_PROFILE) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.349071"
+      "timestamp": "2026-11-15T13:39:36.133427"
     },
     {
       "event_id": "AUD-0005",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0002 (AFFECTED_ITEMS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.349095"
+      "timestamp": "2026-11-15T13:39:36.133492"
     },
     {
       "event_id": "AUD-0006",
       "event_type": "ENTRY_POSTED",
       "agent": "monitor",
       "details": "Posted E-0003 (AFFECTED_SITES) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.349111"
+      "timestamp": "2026-11-15T13:39:36.133521"
     },
     {
       "event_id": "AUD-0007",
       "event_type": "ENTRY_POSTED",
       "agent": "inventory",
       "details": "Posted E-0004 (INVENTORY_STATUS) with confidence 0.98",
-      "timestamp": "2026-11-15T12:34:35.350462"
+      "timestamp": "2026-11-15T13:39:36.138393"
     },
     {
       "event_id": "AUD-0008",
       "event_type": "ENTRY_POSTED",
-      "agent": "supplier",
-      "details": "Posted E-0005 (SUPPLIER_OPTIONS) with confidence 0.95",
-      "timestamp": "2026-11-15T12:34:35.356453"
+      "agent": "route",
+      "details": "Posted E-0005 (ROUTE_OPTIONS) with confidence 0.94",
+      "timestamp": "2026-11-15T13:39:36.166476"
     },
     {
       "event_id": "AUD-0009",
       "event_type": "ENTRY_POSTED",
-      "agent": "route",
-      "details": "Posted E-0006 (ROUTE_OPTIONS) with confidence 0.94",
-      "timestamp": "2026-11-15T12:34:35.358696"
+      "agent": "supplier",
+      "details": "Posted E-0006 (SUPPLIER_OPTIONS) with confidence 0.95",
+      "timestamp": "2026-11-15T13:39:36.188817"
     },
     {
       "event_id": "AUD-0010",
       "event_type": "ENTRY_POSTED",
       "agent": "cost",
       "details": "Posted E-0007 (COST_ESTIMATES) with confidence 0.96",
-      "timestamp": "2026-11-15T12:34:35.360337"
+      "timestamp": "2026-11-15T13:39:36.194872"
     },
     {
       "event_id": "AUD-0011",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
-      "details": "Status changed from GATHERING to READY. Phase 4: Readiness check passed",
-      "timestamp": "2026-11-15T12:34:35.360359"
+      "details": "Status changed from GATHERING to READY. Phase 4: Readiness passed",
+      "timestamp": "2026-11-15T13:39:36.195626"
     },
     {
       "event_id": "AUD-0012",
       "event_type": "ENTRY_POSTED",
       "agent": "coordinator",
       "details": "Posted E-0008 (DECISION) with confidence 0.90",
-      "timestamp": "2026-11-15T12:34:35.360753"
+      "timestamp": "2026-11-15T13:39:36.198431"
     },
     {
       "event_id": "AUD-0013",
       "event_type": "STATUS_CHANGED",
       "agent": "orchestrator",
       "details": "Status changed from READY to DECIDED. Mitigation decision posted",
-      "timestamp": "2026-11-15T12:34:35.360775"
+      "timestamp": "2026-11-15T13:39:36.198467"
+    },
+    {
+      "event_id": "AUD-0014",
+      "event_type": "STATUS_CHANGED",
+      "agent": "orchestrator",
+      "details": "Status changed from DECIDED to DECIDED. Mitigation decision posted",
+      "timestamp": "2026-11-15T13:39:36.207092"
     }
   ],
-  "created_at": "2026-11-15T12:34:35.362436"
+  "created_at": "2026-11-15T13:39:36.209843"
 }

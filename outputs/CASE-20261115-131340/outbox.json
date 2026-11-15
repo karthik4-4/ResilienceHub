@@ -1,0 +1,34 @@
+[
+  {
+    "role": "Logistics Manager",
+    "name": "Nitin Shinde",
+    "channel": "email",
+    "urgency": "high",
+    "recipient_address": "nitin.shinde@resiliencehub.corp",
+    "message": "Subject: [HIGH] Supply Chain Mitigation Order - REROUTE (Case CASE-20261115-131340)\n\nDear Nitin Shinde (Logistics Manager),\n\nA supply chain disruption response decision has been finalized for Case CASE-20261115-131340.\n\nMITIGATION ACTION: REROUTE\nCHOSEN OPTION: LANE-MUM-PUN-RL\nTOTAL ESTIMATED COST: INR 18714.0\nCONFIDENCE: 90.0%\n\nDECISION RATIONALE:\nREROUTE option LANE-MUM-PUN-RL chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.\n\nCITED BLACKBOARD EVIDENCE:\n\n- E-0004\n\n- E-0005\n\n- E-0006\n\n- E-0007\n\n\nPlease take required operational actions immediately.\n\nBest regards,\nSupply Chain Disruption Response Coordinator (SCDRC)\nAutonomous Blackboard Operations Engine"
+  },
+  {
+    "role": "Carrier Dispatcher",
+    "name": "Capt. Rajesh Bhardwaj",
+    "channel": "email",
+    "urgency": "high",
+    "recipient_address": "dispatch@gatiewe.com",
+    "message": "Subject: [HIGH] Supply Chain Mitigation Order - REROUTE (Case CASE-20261115-131340)\n\nDear Capt. Rajesh Bhardwaj (Carrier Dispatcher),\n\nA supply chain disruption response decision has been finalized for Case CASE-20261115-131340.\n\nMITIGATION ACTION: REROUTE\nCHOSEN OPTION: LANE-MUM-PUN-RL\nTOTAL ESTIMATED COST: INR 18714.0\nCONFIDENCE: 90.0%\n\nDECISION RATIONALE:\nREROUTE option LANE-MUM-PUN-RL chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.\n\nCITED BLACKBOARD EVIDENCE:\n\n- E-0004\n\n- E-0005\n\n- E-0006\n\n- E-0007\n\n\nPlease take required operational actions immediately.\n\nBest regards,\nSupply Chain Disruption Response Coordinator (SCDRC)\nAutonomous Blackboard Operations Engine"
+  },
+  {
+    "role": "Site Manager",
+    "name": "Amitabh Ghosh",
+    "channel": "sms",
+    "urgency": "medium",
+    "recipient_address": "+91-98220-44001",
+    "message": "[SCDRC-ALERT-MEDIUM] Case CASE-20261115-131340: REROUTE initiated for LANE-MUM-PUN-RL. Cost: INR 18714.0. Summary: REROUTE option LANE-MUM-PUN-RL chosen based on cost and viability analysis. Justified by Blackboard ... Review board snapshot: CASE-20261115-131340"
+  },
+  {
+    "role": "Customer Service Lead",
+    "name": "Pooja Malhotra",
+    "channel": "email",
+    "urgency": "medium",
+    "recipient_address": "pooja.m@resiliencehub.corp",
+    "message": "Subject: [MEDIUM] Supply Chain Mitigation Order - REROUTE (Case CASE-20261115-131340)\n\nDear Pooja Malhotra (Customer Service Lead),\n\nA supply chain disruption response decision has been finalized for Case CASE-20261115-131340.\n\nMITIGATION ACTION: REROUTE\nCHOSEN OPTION: LANE-MUM-PUN-RL\nTOTAL ESTIMATED COST: INR 18714.0\nCONFIDENCE: 90.0%\n\nDECISION RATIONALE:\nREROUTE option LANE-MUM-PUN-RL chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.\n\nCITED BLACKBOARD EVIDENCE:\n\n- E-0004\n\n- E-0005\n\n- E-0006\n\n- E-0007\n\n\nPlease take required operational actions immediately.\n\nBest regards,\nSupply Chain Disruption Response Coordinator (SCDRC)\nAutonomous Blackboard Operations Engine"
+  }
+]

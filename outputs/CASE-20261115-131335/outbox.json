@@ -1,0 +1,34 @@
+[
+  {
+    "role": "Procurement Manager",
+    "name": "Rajesh Kannan",
+    "channel": "email",
+    "urgency": "high",
+    "recipient_address": "rajesh.kannan@resiliencehub.corp",
+    "message": "Subject: [HIGH] Supply Chain Mitigation Order - REORDER (Case CASE-20261115-131335)\n\nDear Rajesh Kannan (Procurement Manager),\n\nA supply chain disruption response decision has been finalized for Case CASE-20261115-131335.\n\nMITIGATION ACTION: REORDER\nCHOSEN OPTION: SUP-004\nTOTAL ESTIMATED COST: INR 1943016.0\nCONFIDENCE: 90.0%\n\nDECISION RATIONALE:\nREORDER option SUP-004 chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.\n\nCITED BLACKBOARD EVIDENCE:\n\n- E-0004\n\n- E-0005\n\n- E-0006\n\n- E-0007\n\n\nPlease take required operational actions immediately.\n\nBest regards,\nSupply Chain Disruption Response Coordinator (SCDRC)\nAutonomous Blackboard Operations Engine"
+  },
+  {
+    "role": "Supplier Account Rep",
+    "name": "Ramesh Varma",
+    "channel": "email",
+    "urgency": "high",
+    "recipient_address": "ramesh.varma@apexmicro.in",
+    "message": "Subject: [HIGH] Supply Chain Mitigation Order - REORDER (Case CASE-20261115-131335)\n\nDear Ramesh Varma (Supplier Account Rep),\n\nA supply chain disruption response decision has been finalized for Case CASE-20261115-131335.\n\nMITIGATION ACTION: REORDER\nCHOSEN OPTION: SUP-004\nTOTAL ESTIMATED COST: INR 1943016.0\nCONFIDENCE: 90.0%\n\nDECISION RATIONALE:\nREORDER option SUP-004 chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.\n\nCITED BLACKBOARD EVIDENCE:\n\n- E-0004\n\n- E-0005\n\n- E-0006\n\n- E-0007\n\n\nPlease take required operational actions immediately.\n\nBest regards,\nSupply Chain Disruption Response Coordinator (SCDRC)\nAutonomous Blackboard Operations Engine"
+  },
+  {
+    "role": "Finance Controller",
+    "name": "Ananya Sharma",
+    "channel": "email",
+    "urgency": "medium",
+    "recipient_address": "ananya.sharma@resiliencehub.corp",
+    "message": "Subject: [MEDIUM] Supply Chain Mitigation Order - REORDER (Case CASE-20261115-131335)\n\nDear Ananya Sharma (Finance Controller),\n\nA supply chain disruption response decision has been finalized for Case CASE-20261115-131335.\n\nMITIGATION ACTION: REORDER\nCHOSEN OPTION: SUP-004\nTOTAL ESTIMATED COST: INR 1943016.0\nCONFIDENCE: 90.0%\n\nDECISION RATIONALE:\nREORDER option SUP-004 chosen based on cost and viability analysis. Justified by Blackboard entries: E-0004, E-0005, E-0006, E-0007.\n\nCITED BLACKBOARD EVIDENCE:\n\n- E-0004\n\n- E-0005\n\n- E-0006\n\n- E-0007\n\n\nPlease take required operational actions immediately.\n\nBest regards,\nSupply Chain Disruption Response Coordinator (SCDRC)\nAutonomous Blackboard Operations Engine"
+  },
+  {
+    "role": "Plant Manager",
+    "name": "Sunita Menon",
+    "channel": "sms",
+    "urgency": "critical",
+    "recipient_address": "+91-98401-22002",
+    "message": "[SCDRC-ALERT-CRITICAL] Case CASE-20261115-131335: REORDER initiated for SUP-004. Cost: INR 1943016.0. Summary: REORDER option SUP-004 chosen based on cost and viability analysis. Justified by Blackboard entries:... Review board snapshot: CASE-20261115-131335"
+  }
+]
